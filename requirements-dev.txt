@@ -1,0 +1,9 @@
+# Dev only: headless dashboard screenshots (scripts/screenshots.py). Then: python -m playwright install chromium
+playwright==1.64.1
+# Stress scripts (scripts/stress/): server memory sampling
+psutil==7.0.0
+# Tests: an in-memory Redis for every test (tests/conftest.py)
+fakeredis==2.30.1
+# CI and docs/sbom/: known vulnerabilities, and the CycloneDX bill of materials (scripts/sbom.py)
+pip-audit==2.10.1
+cyclonedx-bom==7.1.0

@@ -1,0 +1,265 @@
+{
+  "minutes": 30.0,
+  "questions_asked": 90,
+  "emergency_toggles": 15,
+  "heap_mb_minutes_3_10": 8.49,
+  "heap_mb_last_8": 9.085,
+  "dom_nodes_minutes_3_10": {
+    "dashboard": 538.0,
+    "emergency": 721.5
+  },
+  "dom_nodes_last_8": {
+    "dashboard": 538.0,
+    "emergency": 722.0
+  },
+  "checks": {
+    "heap_growth_under_20pct": true,
+    "dom_nodes_stable": true,
+    "alerts_list_capped_at_6": true,
+    "chat_capped_at_40": true
+  },
+  "pass": true,
+  "samples": [
+    {
+      "heap_mb": 6.87,
+      "dom_nodes": 511,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 19,
+      "minute": 0.0
+    },
+    {
+      "heap_mb": 7.79,
+      "dom_nodes": 701,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 25,
+      "minute": 1.0
+    },
+    {
+      "heap_mb": 7.98,
+      "dom_nodes": 707,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 31,
+      "minute": 2.0
+    },
+    {
+      "heap_mb": 8.04,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 37,
+      "minute": 3.0
+    },
+    {
+      "heap_mb": 8.13,
+      "dom_nodes": 541,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 4.0
+    },
+    {
+      "heap_mb": 8.39,
+      "dom_nodes": 716,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 5.0
+    },
+    {
+      "heap_mb": 8.51,
+      "dom_nodes": 724,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 6.0
+    },
+    {
+      "heap_mb": 8.47,
+      "dom_nodes": 535,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 7.0
+    },
+    {
+      "heap_mb": 8.51,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 8.0
+    },
+    {
+      "heap_mb": 8.71,
+      "dom_nodes": 722,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 9.0
+    },
+    {
+      "heap_mb": 8.75,
+      "dom_nodes": 721,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 10.0
+    },
+    {
+      "heap_mb": 8.62,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 11.0
+    },
+    {
+      "heap_mb": 8.65,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 12.0
+    },
+    {
+      "heap_mb": 8.78,
+      "dom_nodes": 722,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 13.0
+    },
+    {
+      "heap_mb": 8.93,
+      "dom_nodes": 722,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 14.0
+    },
+    {
+      "heap_mb": 8.81,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 15.0
+    },
+    {
+      "heap_mb": 8.82,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 16.0
+    },
+    {
+      "heap_mb": 9.06,
+      "dom_nodes": 726,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 17.0
+    },
+    {
+      "heap_mb": 8.95,
+      "dom_nodes": 726,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 18.0
+    },
+    {
+      "heap_mb": 8.84,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 19.0
+    },
+    {
+      "heap_mb": 8.85,
+      "dom_nodes": 541,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 20.0
+    },
+    {
+      "heap_mb": 8.99,
+      "dom_nodes": 726,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 21.0
+    },
+    {
+      "heap_mb": 9.01,
+      "dom_nodes": 726,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 22.0
+    },
+    {
+      "heap_mb": 8.91,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 23.0
+    },
+    {
+      "heap_mb": 8.93,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 24.0
+    },
+    {
+      "heap_mb": 9.07,
+      "dom_nodes": 717,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 25.0
+    },
+    {
+      "heap_mb": 9.1,
+      "dom_nodes": 718,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 26.0
+    },
+    {
+      "heap_mb": 9.15,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 27.0
+    },
+    {
+      "heap_mb": 9.15,
+      "dom_nodes": 538,
+      "emergency_view": false,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 28.0
+    },
+    {
+      "heap_mb": 9.32,
+      "dom_nodes": 726,
+      "emergency_view": true,
+      "alerts": 6,
+      "chat_lines": 40,
+      "minute": 29.0
+    }
+  ],
+  "console_errors": []
+}

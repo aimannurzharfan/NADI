@@ -1,0 +1,4 @@
+# The image needs only the package list: the project folder is mounted when the container runs.
+# Nothing else (and never .env) is sent to the Docker build.
+*
+!requirements.txt

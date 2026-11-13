@@ -1,0 +1,22 @@
+{
+  "_about": "Level 4 floor plan: a made-up layout for the demo. Coordinates are SVG units in a 1000 x 560 box. To match a real building, redraw the rectangles here; nothing else needs to change. rooms: keyed by room_id from the sensors; name = what the room is called when ROOM_NAMES has no entry for it (shown as written in both languages); door = gap in the corridor wall; exit = nearest stairwell, also used by the chat's 'check first' answer. Rooms that report data but are not listed here still show as cards, just not on the plan. other: spaces without a sensor, drawn for orientation only. link (optional): where the room's CSI sender and receiver stand, for the sensing line on the overview. Labels are keys in strings.json.",
+  "viewBox": [0, 0, 1000, 560],
+  "outline": {"x": 20, "y": 20, "w": 960, "h": 520},
+  "corridor": {"x": 20, "y": 240, "w": 960, "h": 70},
+  "rooms": {
+    "room2": {"name": "Hall A", "x": 120, "y": 20, "w": 400, "h": 220, "door": {"x": 440, "side": "s"}, "exit": "stairA"},
+    "room1": {"name": "Lab 2", "x": 520, "y": 20, "w": 260, "h": 220, "door": {"x": 700, "side": "s"}, "exit": "stairB",
+              "link": {"send": {"x": 548, "y": 196}, "recv": {"x": 752, "y": 196}}},
+    "room3": {"name": "Room 3", "x": 340, "y": 310, "w": 280, "h": 230, "door": {"x": 380, "side": "n"}, "exit": "stairA"}
+  },
+  "exits": {
+    "stairA": {"label": "plan.stair_a", "x": 20, "y": 20, "w": 100, "h": 220, "door": {"x": 70, "side": "s"}},
+    "stairB": {"label": "plan.stair_b", "x": 860, "y": 310, "w": 120, "h": 230, "door": {"x": 920, "side": "n"}}
+  },
+  "other": [
+    {"label": "plan.toilets", "x": 780, "y": 20, "w": 200, "h": 220},
+    {"label": "plan.store", "x": 20, "y": 310, "w": 160, "h": 230},
+    {"label": "plan.lifts", "x": 180, "y": 310, "w": 160, "h": 230},
+    {"label": "plan.pantry", "x": 620, "y": 310, "w": 240, "h": 230}
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "passed": 45,
+  "total": 45,
+  "results": [
+    {
+      "check": "baseline: simulator data is live",
+      "pass": true,
+      "detail": "0.0"
+    },
+    {
+      "check": "baseline: no banner",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "emergency started",
+      "pass": true,
+      "detail": "{'on': True, 'since': 1793144584, 'drill': False, 'id': '20261027-234304-real-7693'}"
+    },
+    {
+      "check": "snapshot saved on disk the moment the emergency started",
+      "pass": true,
+      "detail": "scripts\\stress\\results\\logs\\incidents\\20261027-234304-real-7693"
+    },
+    {
+      "check": "dashboard shows the emergency view",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "redis down: server answers and reports it offline",
+      "pass": true,
+      "detail": "1.0"
+    },
+    {
+      "check": "redis down: dashboard banner 'Database offline, showing last known data at...'",
+      "pass": true,
+      "detail": "Database offline, showing last known data at 07:43."
+    },
+    {
+      "check": "redis down: emergency still shown from last known state",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "redis down: chat still answers from last known data",
+      "pass": true,
+      "detail": "(200, {'answer': '1 person inside, in 1 room.', 'source': 'fallback', 'model': 'built-in answers (no language model)'})"
+    },
+    {
+      "check": "redis down: dashboard stays in emergency view",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "redis down: rate limits still enforced (kept in memory meanwhile)",
+      "pass": true,
+      "detail": "[200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 429, 429]"
+    },
+    {
+      "check": "redis down: server process still running",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "redis back: recovered on its own",
+      "pass": true,
+      "detail": "1.1"
+    },
+    {
+      "check": "redis back: banner cleared",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "redis back: emergency and start time survived the Redis restart",
+      "pass": true,
+      "detail": "{'on': True, 'since': 1793144584, 'drill': False, 'id': '20261027-234304-real-7693'}"
+    },
+    {
+      "check": "mysql down: server answers and reports it offline",
+      "pass": true,
+      "detail": "10.3"
+    },
+    {
+      "check": "mysql down: dashboard banner 'History database offline since...'",
+      "pass": true,
+      "detail": "History database offline since 07:43. Live counts still update; history is saved when it is back."
+    },
+    {
+      "check": "mysql down: history answers 503, not 500",
+      "pass": true,
+      "detail": "503"
+    },
+    {
+      "check": "mysql down: server process still running",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mysql back: recovered on its own",
+      "pass": true,
+      "detail": "4.1"
+    },
+    {
+      "check": "mysql back: banner cleared",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mysql back: reports made during the outage were written (buffered)",
+      "pass": true,
+      "detail": "3"
+    },
+    {
+      "check": "mqtt down: server answers and reports it offline",
+      "pass": true,
+      "detail": "0.0"
+    },
+    {
+      "check": "mqtt down: dashboard banner 'Sensor link offline since...'",
+      "pass": true,
+      "detail": "Sensor link offline since 07:44. Counts are not updating."
+    },
+    {
+      "check": "mqtt down: server process still running",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mqtt back: recovered on its own",
+      "pass": true,
+      "detail": "6.2"
+    },
+    {
+      "check": "mqtt back: banner cleared",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mqtt back: new sensor reports arrive again",
+      "pass": true,
+      "detail": "8.2"
+    },
+    {
+      "check": "ollama down: chat answers with the built-in checked answer",
+      "pass": true,
+      "detail": "(200, {'answer': 'No rooms are empty.', 'source': 'fallback', 'model': 'built-in answers (no language model)'})"
+    },
+    {
+      "check": "ollama down: first answer within the chat time limit (6 s)",
+      "pass": true,
+      "detail": "4.21"
+    },
+    {
+      "check": "ollama down: next answers at once (no wait after the first failure)",
+      "pass": true,
+      "detail": "0.03"
+    },
+    {
+      "check": "ollama down: server process still running",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "ollama back: running again",
+      "pass": true,
+      "detail": "0.0"
+    },
+    {
+      "check": "server down: dashboard says the server is unreachable",
+      "pass": true,
+      "detail": "Server unreachable, showing last known data at 07:44."
+    },
+    {
+      "check": "server restarted mid-emergency: emergency still on with the same start time",
+      "pass": true,
+      "detail": "{'on': True, 'since': 1793144584, 'drill': False, 'id': '20261027-234304-real-7693'}"
+    },
+    {
+      "check": "server crashed and restarted: snapshots kept, and saved every minute again",
+      "pass": true,
+      "detail": "(2, 5.0)"
+    },
+    {
+      "check": "server back: dashboard recovers on its own",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "sensors offline: rooms marked offline",
+      "pass": true,
+      "detail": "12.4"
+    },
+    {
+      "check": "sensors offline: last known counts kept",
+      "pass": true,
+      "detail": "[('room1', 3), ('room2', 2), ('room3', 1)]"
+    },
+    {
+      "check": "sensors offline: rooms show as unknown with their last known count, never as empty",
+      "pass": true,
+      "detail": "Emergency mode\n\n2:21since the alarm\n\nDemo Building, Level 4\n\nExport for emergency services\nEnd emergency mode\n\nAt least\n\n0\n\npeople still inside\n\nin 0 rooms\n\n3 rooms unknown: Lab 2, Hall A, Room 3\n\nGo "
+    },
+    {
+      "check": "sensors offline: total says 'at least' and names the unknown rooms",
+      "pass": true,
+      "detail": "Emergency mode\n\n2:21since the alarm\n\nDemo Building, Level 4\n\nExport for emergency services\nEnd emergency mode\n\nAt least\n\n0\n\npeople still inside\n\nin 0 rooms\n\n3 rooms unknown: Lab 2, Hall A, Room 3\n\nGo "
+    },
+    {
+      "check": "sensors stopped: a 'sensor stopped' alert, critical during the emergency",
+      "pass": true,
+      "detail": "[{'id': '6ae13796-8e12ff', 'ts': 1793144726, 'kind': 'sensor', 'severity': 'critical', 'via': 'console', 'subject': 'NADI: Sensor stopped reporting (load01, load02, load03, load04, load05 and 28 more)', 'message': 'The occupancy sensor for load01, load02, load03, load04, load05 and 28 more has not r"
+    },
+    {
+      "check": "sensors stopped: one alert only, no repeats",
+      "pass": true,
+      "detail": "['NADI: Sensor stopped reporting (load01, load02, load03, load04, load05 and 28 more)']"
+    },
+    {
+      "check": "sensors back: one 'back online' alert",
+      "pass": true,
+      "detail": "(5.1, [{'id': '6ae137aa-637946', 'ts': 1793144746, 'kind': 'sensor', 'severity': 'info', 'via': 'console', 'subject': 'NADI: Sensor back online (load01, load02, load03, load04, load05 and 28 more)', 'message': 'The occupancy sensor for load01, load02, load03, load04, load05 and 28 more is reporting "
+    },
+    {
+      "check": "emergency ended: report written, with the rooms that went offline",
+      "pass": true,
+      "detail": "[{'room_id': 'room1', 'name': 'Lab 2', 'periods': [[1793144687, 1793144697], [1793144726, 1793144746]]}, {'room_id': 'room2', 'name': 'Hall A', 'periods': [[1793144687, 1793144697], [1793144726, 1793144746]]}, {'room_id': 'room3', 'name': 'Room 3', 'periods': [[1793144687, 1793144697], [1793144726, "
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# CodeArts Pipeline, YAML orchestration. See deploy/CODEARTS.md step 6.
+# Replace the two jobId values with the 32-character IDs of your CodeArts Build job (step 4)
+# and CodeArts Deploy job (step 5): open each job, copy the ID at the end of the browser URL.
+jobs:
+  build:
+    name: Build and test
+    steps:
+      - name: Unit tests + package nadi.tar.gz
+        uses: CodeArtsBuild
+        with:
+          jobId: REPLACE_WITH_BUILD_JOB_ID
+          artifactIdentifier: nadi
+  deploy:
+    name: Deploy to ECS
+    needs:
+      - build
+    steps:
+      - name: Install and restart NADI on the ECS host group
+        uses: CodeArtsDeploy
+        with:
+          jobId: REPLACE_WITH_DEPLOY_JOB_ID

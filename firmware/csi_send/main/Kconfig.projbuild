@@ -1,0 +1,41 @@
+menu "NADI CSI sender"
+
+    config NADI_AP_SSID
+        string "Wi-Fi network name (SSID) the receiver uses"
+        default ""
+        help
+            The sender does not join the network (no password needed). It scans for this
+            name and sends on the same channel, because the receiver stays connected to
+            this network for MQTT and can only hear packets on its channel.
+            Leave empty to always use the fixed channel below.
+
+    config NADI_FIXED_CHANNEL
+        int "Channel to use if the network is not found (1-13)"
+        range 1 13
+        default 6
+
+    config NADI_SEND_HZ
+        int "Packets per second"
+        range 10 200
+        default 50
+
+    config NADI_SENDER_MAC
+        string "Sender MAC address (the receiver listens for this one)"
+        default "1a:00:00:00:00:00"
+        help
+            Must match the receiver's "Sender MAC address". Use a different one for each
+            sender if there is more than one room, for example 1a:00:00:00:00:02.
+
+    config NADI_RESCAN_S
+        int "Seconds between checks that the network has not changed channel"
+        range 30 3600
+        default 300
+
+    config NADI_LED_GPIO
+        int "Status LED pin (onboard RGB LED)"
+        range -1 48
+        default 48
+        help
+            48 on most ESP32-S3 DevKitC-1 boards, 38 on some versions (v1.1). -1 turns the LED off.
+
+endmenu

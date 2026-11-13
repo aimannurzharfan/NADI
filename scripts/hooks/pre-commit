@@ -1,0 +1,13 @@
+#!/bin/sh
+# Refuse a commit that would add a secret (key, token, password) to git. Scans only what is staged.
+# Turn it on once per clone:   git config core.hooksPath scripts/hooks
+# Needs gitleaks 8.30.1 on the PATH: see CONTRIBUTING.md. CI scans the whole history again on every push.
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-commit: gitleaks is not installed, so the secret scan cannot run. Install it (CONTRIBUTING.md) and commit again."
+  exit 1
+fi
+gitleaks git --pre-commit --staged --redact --no-banner --config .gitleaks.toml . || {
+  echo "pre-commit: gitleaks found what looks like a secret in the staged changes (shown above, redacted)."
+  echo "Move it to .env (git-ignored) and commit again."
+  exit 1
+}

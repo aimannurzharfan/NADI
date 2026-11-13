@@ -1,0 +1,4803 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "tools": [
+      {
+        "vendor": "npm",
+        "name": "cli",
+        "version": "11.6.1"
+      }
+    ],
+    "component": {
+      "bom-ref": "nadi-web@1.0.0",
+      "type": "library",
+      "name": "web",
+      "version": "1.0.0",
+      "scope": "required",
+      "purl": "pkg:npm/nadi-web@1.0.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:private",
+          "value": "true"
+        }
+      ],
+      "externalReferences": []
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "@floating-ui/core@1.8.0",
+      "type": "library",
+      "name": "@floating-ui/core",
+      "version": "1.8.0",
+      "scope": "required",
+      "author": "atomiks",
+      "description": "Positioning library for floating elements: tooltips, popovers, dropdowns, and more",
+      "purl": "pkg:npm/%40floating-ui/core@1.8.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@floating-ui/core/-/core-1.8.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/floating-ui/floating-ui.git"
+        },
+        {
+          "type": "website",
+          "url": "https://floating-ui.com"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/floating-ui/floating-ui"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d02219e62b69b3ff31ec11bc744221b39dc1bc2507d8f0a8a20b5a930453badf80ae6e7cb09a2827402e6612f0d87258211e5c30b34f0524bbdbcb0f868da485"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@floating-ui/dom@1.8.0",
+      "type": "library",
+      "name": "@floating-ui/dom",
+      "version": "1.8.0",
+      "scope": "required",
+      "author": "atomiks",
+      "description": "Floating UI for the web",
+      "purl": "pkg:npm/%40floating-ui/dom@1.8.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@floating-ui/dom/-/dom-1.8.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/floating-ui/floating-ui.git"
+        },
+        {
+          "type": "website",
+          "url": "https://floating-ui.com"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/floating-ui/floating-ui"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c974abcde1d905365a74b3a57f28429091cd78b2671d19d1227c1d678d0bed989a02dac1c28625b03ad7defe7307552d93b08b7f370e5675555a85c4932ec27a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@floating-ui/react-dom@2.1.9",
+      "type": "library",
+      "name": "@floating-ui/react-dom",
+      "version": "2.1.9",
+      "scope": "required",
+      "author": "atomiks",
+      "description": "Floating UI for React DOM",
+      "purl": "pkg:npm/%40floating-ui/react-dom@2.1.9",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@floating-ui/react-dom/-/react-dom-2.1.9.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/floating-ui/floating-ui.git"
+        },
+        {
+          "type": "website",
+          "url": "https://floating-ui.com/docs/react-dom"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/floating-ui/floating-ui"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2438c41460a9226c43080ec924abe203433df91b6625d8f49bf35553920c8012be026668b80410efffb618b1f41975d8d18330f685cf07c84a75b3d883940b62"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@floating-ui/utils@0.2.12",
+      "type": "library",
+      "name": "@floating-ui/utils",
+      "version": "0.2.12",
+      "scope": "required",
+      "author": "atomiks",
+      "description": "Utilities for Floating UI",
+      "purl": "pkg:npm/%40floating-ui/utils@0.2.12",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@floating-ui/utils/-/utils-0.2.12.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/floating-ui/floating-ui.git"
+        },
+        {
+          "type": "website",
+          "url": "https://floating-ui.com"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/floating-ui/floating-ui"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1e90a8f2d996ccb55a779b36775f44840cf9ceaaeb43ab3af6a77a9a83cc42f90eb92c034f562045f59256e7387a79eaae0bf7387a6988e18c43ba02d77c88c3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@fontsource-variable/inter@5.1.0",
+      "type": "library",
+      "name": "@fontsource-variable/inter",
+      "version": "5.1.0",
+      "scope": "required",
+      "author": "Google Inc.",
+      "description": "Self-host the Inter font in a neatly bundled NPM package.",
+      "purl": "pkg:npm/%40fontsource-variable/inter@5.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@fontsource-variable/inter/-/inter-5.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fontsource/font-files.git"
+        },
+        {
+          "type": "website",
+          "url": "https://fontsource.org/fonts/inter"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fontsource/font-files/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "5a3d9d5063f4bd4a714464135d04c23493be68b7057109be8143d77e3fda4bcefb6d09043c13eff49bd9269c1d9b6bf37a5b7c35367e6aeb0a9410898e1d9722"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "OFL-1.1"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/number@1.1.3",
+      "type": "library",
+      "name": "@radix-ui/number",
+      "version": "1.1.3",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/number@1.1.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/number/-/number-1.1.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "46869dd9b89d0f4baeff50460ce58d74f234ea0d25211cba205f4665c22b0cad8a188b5fa2bf0843041afb23361118073353261f16b1a53ce4d3f269e3694d7c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/primitive@1.2.0",
+      "type": "library",
+      "name": "@radix-ui/primitive",
+      "version": "1.2.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/primitive@1.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/primitive/-/primitive-1.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "280058f9530844f24bf95cb3bffdf7e451215d70ffc43bfc04c6f5925e3cfda5c964c1f42ed1c24f1e606b9467c5a10fde7647b664cb7f53fdbda9e6157e3a6f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-arrow@1.1.17",
+      "type": "library",
+      "name": "@radix-ui/react-arrow",
+      "version": "1.1.17",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-arrow@1.1.17",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-arrow/-/react-arrow-1.1.17.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ebb8e3715bf18d70824ad9d35b767e33b8e668532e311eccd898290f31f8c3b25246b8a49b38637d880fff4f4409bf27ef0867b2087589f27e21ef7aa848fea5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-collection@1.2.0",
+      "type": "library",
+      "name": "@radix-ui/react-collection",
+      "version": "1.2.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-collection@1.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-collection/-/react-collection-1.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fb2890cea71ced2cbbff9b348eb3028e93d1141df9dfc54dad73d67532d9844fd209f804c2ce1a23a94758dfefbdc9f28479dd44e581cea9aa078401ac84d9f5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-compose-refs@1.1.5",
+      "type": "library",
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.5",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-compose-refs@1.1.5",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.5.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fb8f0f6c001bab77627632716be39a598d99c2000ab0d8911b27872accdb959310fa472977da40693d7570c9061227b4bec3a2dd075e4c4e9de457b71a7eb590"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-context@1.3.0",
+      "type": "library",
+      "name": "@radix-ui/react-context",
+      "version": "1.3.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-context@1.3.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.3.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "bf901812870c21291b27ed5f4d7cd9a6216fecd46bdc3d968986cb20a7fe164989f1590fe9de74dde5769f7e0c16eb2c1d7635a5ca2adf27c98901fbedd73832"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-dialog@1.3.1",
+      "type": "library",
+      "name": "@radix-ui/react-dialog",
+      "version": "1.3.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-dialog@1.3.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-dialog/-/react-dialog-1.3.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fb4138aaf553c23016adaf6c12127ef414ecbc7134d33914b8dc3554687b4be19cd7775f624f92d4f55075c8560e3f976078406a2ed9ec8a735d50c21ac0e996"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-direction@1.2.0",
+      "type": "library",
+      "name": "@radix-ui/react-direction",
+      "version": "1.2.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-direction@1.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-direction/-/react-direction-1.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "16d440e766bfafe2ca4ad153fa778b526fbcbd27bbc1bce46d0186794f22c458b00bc354d7812fa2af404c40aa2f77866dc533251e1fc9f0382a42bfaba75faa"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-dismissable-layer@1.2.1",
+      "type": "library",
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.2.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-dismissable-layer@1.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2887c3700b31fa8572945678c6bc952aeb0952b2cb8534267e7256e24c24e0a9b99b2be11c2ae3d38867596502d7aebec43e031dd1fcb501b2970617d61ebe3e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-dropdown-menu@2.2.1",
+      "type": "library",
+      "name": "@radix-ui/react-dropdown-menu",
+      "version": "2.2.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-dropdown-menu@2.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-dropdown-menu/-/react-dropdown-menu-2.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "5ec1dc9981b601caa7bd3aab3975d670cae1aae10896ab9c8b3b831f5315fea3115be0e776904232f35e4d15cec6a986d47e63f3d33ff88d3fdf865d77ecc371"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-focus-guards@1.2.0",
+      "type": "library",
+      "name": "@radix-ui/react-focus-guards",
+      "version": "1.2.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-focus-guards@1.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-focus-guards/-/react-focus-guards-1.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "30f9b94748911940eb0e73cdc662c192ff97ee93785cacedf8c6d6244b8942c1f73451f8a26adba57a6e73260208a4d2b7e9dafd9c46844590ad64d9d36f3970"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-focus-scope@1.3.1",
+      "type": "library",
+      "name": "@radix-ui/react-focus-scope",
+      "version": "1.3.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-focus-scope@1.3.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-focus-scope/-/react-focus-scope-1.3.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ba078c85b5ede32e52d93d469c8a9b58328437deb63c3c275f57cdd1e28e3a07f97fadc38769a7f05d455324a5816d2217a1a256c445df60f3b832164d4c9026"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-id@1.1.4",
+      "type": "library",
+      "name": "@radix-ui/react-id",
+      "version": "1.1.4",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-id@1.1.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-id/-/react-id-1.1.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4cc429da5940f91627ec97239eb327cfbc0de29715b6d3d99d1668e763cb42ca0b54accd955c1478799f78f81381196e5c5be50f7183e60e4c3955532423b4a8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-menu@2.2.1",
+      "type": "library",
+      "name": "@radix-ui/react-menu",
+      "version": "2.2.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-menu@2.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-menu/-/react-menu-2.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1b7e01b14f744818f97e8629cfca50aaafd0d0395fcb297a2a2b5611f4705c2d10bdfc2158d0304b8f4358fdbead12748b0bf6d19d90c7b4a4f93d376c6a3924"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-popper@1.4.0",
+      "type": "library",
+      "name": "@radix-ui/react-popper",
+      "version": "1.4.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-popper@1.4.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-popper/-/react-popper-1.4.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c82591bcb786bfd3f3dfe79fc07a863e9ef4999e7aaf791f220415179e8e8f66806b8b8ffd36fe204e7dc0d71cfbbe7cadcb6a6c22b1e0b6caf0823fafb067d1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-portal@1.2.0",
+      "type": "library",
+      "name": "@radix-ui/react-portal",
+      "version": "1.2.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-portal@1.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-portal/-/react-portal-1.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4ad5fbc579da454e3556f16d326f73961546cfc5c5e869965935dfb6441a63eb6a5646ecfd1f54980a7998bcc71daa64e6133d44c650bceff7bacc883ff838da"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-presence@1.1.11",
+      "type": "library",
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.11",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-presence@1.1.11",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.1.11.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "67bfdab6591a6f7e99f219be57ccd873bf6bd16fad88e075a34b6e9f5072f7827269d91e90b426b440270523fd5ca5c1350b12b684ad4b8fa05f5d09a52e5a90"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-primitive@2.2.0",
+      "type": "library",
+      "name": "@radix-ui/react-primitive",
+      "version": "2.2.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-primitive@2.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-2.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1c24d23cc36abf9e50934217e207896e9c976b39aaba57229b0bb28f14e42a2dbdbfe4196c6d99868f419db06ae184b63c5f8a94d6f6097a0bcfaeae5266e592"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-roving-focus@1.2.1",
+      "type": "library",
+      "name": "@radix-ui/react-roving-focus",
+      "version": "1.2.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-roving-focus@1.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-roving-focus/-/react-roving-focus-1.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "530ada391cd551e10f31c9613b5a74bf3d2a23e4db7432cef62f8588eaa12721cac1da42442724f72544b1c52700c2330a2b8da106bc0f803d6c8a4e3d71ade9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-scroll-area@1.4.0",
+      "type": "library",
+      "name": "@radix-ui/react-scroll-area",
+      "version": "1.4.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-scroll-area@1.4.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-scroll-area/-/react-scroll-area-1.4.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "085acba8735e8d6ab9161280723f55fd63c646ca25efa1c142da3cd4d74e0551443aa20490990a209b7467cdb803ff611cb0ada2247f2b0ddeb918335cfda9c6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-select@2.4.1",
+      "type": "library",
+      "name": "@radix-ui/react-select",
+      "version": "2.4.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-select@2.4.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-select/-/react-select-2.4.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f3cf19c16d0c77a1b2a6dbaa6000515fd9cb2a0a187dca280b2041bd5697e49a777bef09a768b8668fd4cb9d079be62c9f625f968417b2d5b8537eb0f2d795b6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-separator@1.2.0",
+      "type": "library",
+      "name": "@radix-ui/react-separator",
+      "version": "1.2.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-separator@1.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-separator/-/react-separator-1.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d635006a9d30644a953f4e4ebbb909811c5efd6f907ed9e0fab50d5866b4aa429bbfdaf9a564c6dc4edadc42caa36789a0728c1029f3b98ad9a52c8ed5881c61"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-slot@1.5.0",
+      "type": "library",
+      "name": "@radix-ui/react-slot",
+      "version": "1.5.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-slot@1.5.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.5.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b7261df5d74f5c0cac01b75b0fd798c60c29092bfa7f73e772a55234a405491e6570954bcf771bfe900d0e862b2e21c1a57bfbb24a2bb725201945ac62e3cf15"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-switch@1.4.1",
+      "type": "library",
+      "name": "@radix-ui/react-switch",
+      "version": "1.4.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-switch@1.4.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-switch/-/react-switch-1.4.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "369046c1ce34ad8d366664afbb278a93406f73c66c35e4cc8b8a87bc9f991f8122602bf4cc85c481d096e1b55dce021478ff71c5b2c94b128e51fa884d836690"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-tabs@1.2.1",
+      "type": "library",
+      "name": "@radix-ui/react-tabs",
+      "version": "1.2.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-tabs@1.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-tabs/-/react-tabs-1.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "851a0996875efa183964d951fb7b647e4525888c9b753a43e65900bc743dc9a5ec7867fb5d53bd21bd863c420eb9a2496e8ed85986cda430d17e8f0385febfc4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-toggle@1.2.1",
+      "type": "library",
+      "name": "@radix-ui/react-toggle",
+      "version": "1.2.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-toggle@1.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-toggle/-/react-toggle-1.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fb7314abe5b2881a655d8a90d0421896af11e2c2d0d13e4d6ce2bb0cc7432c228ef77a5edae1340d42535967d3069ae92495f17e817778c5b4c696a4559ad8b2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-toggle-group@1.2.1",
+      "type": "library",
+      "name": "@radix-ui/react-toggle-group",
+      "version": "1.2.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-toggle-group@1.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-toggle-group/-/react-toggle-group-1.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3bc2ddc796a8e29e0aa16f833bcfcf9a439ee6674a362dc5d92b1eaa3563f3cc2f0c60c77bad1c5263b4666fee1ec2abbcd810195f047e9ba1f794e1b7f878bf"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-tooltip@1.4.1",
+      "type": "library",
+      "name": "@radix-ui/react-tooltip",
+      "version": "1.4.1",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-tooltip@1.4.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-tooltip/-/react-tooltip-1.4.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3712c519216d67bf3355f7283a14f0475c70aa8e6ac75261f0fc3a14c67d31c09aa9f473cfbfe02116a1b363b2e5794f810fbc42451c29b379074538e09fe40a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-use-callback-ref@1.1.5",
+      "type": "library",
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.5",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-use-callback-ref@1.1.5",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.1.5.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6391817f834a7800e85c8d607a232532e3285114f793d322cf3cca8466ff9b9e47f786868a0674d4f22992fb0eea530bd77040e976005d227a8336bbbd39f99f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-use-controllable-state@1.3.0",
+      "type": "library",
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.3.0",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-use-controllable-state@1.3.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-use-controllable-state/-/react-use-controllable-state-1.3.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4c070123b6f0da58d809bbf8fb3b9349deb3202bbca51b7a483376bc9fd9d3a2b631787a23d59815efc0f68be5143b51e475471a6e620f10e80019bffbe75b2a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-use-effect-event@0.0.5",
+      "type": "library",
+      "name": "@radix-ui/react-use-effect-event",
+      "version": "0.0.5",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-use-effect-event@0.0.5",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-use-effect-event/-/react-use-effect-event-0.0.5.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "edcb2114bf07192ffb1c48871fef642fd1c1c29dac6bdc97d7c2a7c1e93a2985a65f033ba5e80c82d6b6017310288fabab72677d28fdc7cc18a85313746d4982"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-use-is-hydrated@0.1.3",
+      "type": "library",
+      "name": "@radix-ui/react-use-is-hydrated",
+      "version": "0.1.3",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-use-is-hydrated@0.1.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-use-is-hydrated/-/react-use-is-hydrated-0.1.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ba63bf689fbcd82a4e9e10d95136c82c241fee453f8348affa81acfd0f23c3b2248560736843f8b00dbaf0f8450094c57ad6f0a7720273a92da48e13aadc5c23"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-use-layout-effect@1.1.4",
+      "type": "library",
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.4",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-use-layout-effect@1.1.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-use-layout-effect/-/react-use-layout-effect-1.1.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2b6d03911914c039f11183013dc83763abe82e4132e69e50426b336602e780a2a20bb773051fda12e2b7c35aa5c762560d4347e8596e6a161d811dc13fe41b63"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-use-rect@1.1.4",
+      "type": "library",
+      "name": "@radix-ui/react-use-rect",
+      "version": "1.1.4",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-use-rect@1.1.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-use-rect/-/react-use-rect-1.1.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "71238287a2659267e32f235c2e2bb69c1e2ffa79be76467e4392875a4feca28e14ed92e211014a1caf7f626b411e37c211a538dc804a40e738fee26609a8824d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-use-size@1.1.5",
+      "type": "library",
+      "name": "@radix-ui/react-use-size",
+      "version": "1.1.5",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-use-size@1.1.5",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-use-size/-/react-use-size-1.1.5.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "57531c0d090c1b3822bf0a9dbbbbbde803ecee88b426f8fd2d3ce0ab7596ac366ac56740a94f72667650aa4e4e8b318547c6da75443066cae56a8ecc3a559838"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/react-visually-hidden@1.2.13",
+      "type": "library",
+      "name": "@radix-ui/react-visually-hidden",
+      "version": "1.2.13",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/react-visually-hidden@1.2.13",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/react-visually-hidden/-/react-visually-hidden-1.2.13.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7de8a388dd683e4e2b724e2ef439bdb6c538993e96a7da1e10485acf559412cd55baa2dff31cec146f9093eb96aba4e7307f4ef9644409183435fb723fd13817"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@radix-ui/rect@1.1.3",
+      "type": "library",
+      "name": "@radix-ui/rect",
+      "version": "1.1.3",
+      "scope": "required",
+      "purl": "pkg:npm/%40radix-ui/rect@1.1.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@radix-ui/rect/-/rect-1.1.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/radix-ui/primitives.git"
+        },
+        {
+          "type": "website",
+          "url": "https://radix-ui.com/primitives"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/radix-ui/primitives/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "26dc9947e9aa80189b4e8f3179adc1e99466cd988cfd879506d5246aceb332e5e30257c81485b6160a9e33d78bcaf11a617ebabebe8324c2bee14e8b5742a137"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@remix-run/router@1.23.4",
+      "type": "library",
+      "name": "@remix-run/router",
+      "version": "1.23.4",
+      "scope": "required",
+      "author": "Remix Software",
+      "description": "Nested/Data-driven/Framework-agnostic Routing",
+      "purl": "pkg:npm/%40remix-run/router@1.23.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@remix-run/router/-/router-1.23.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/remix-run/react-router.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/remix-run/react-router#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/remix-run/react-router/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "abb8f981e2bbc6cdd4252766f7f8b2b5435c9419cb998c7512749e0855c73debad76a80831e15e1ed519812dc48652b1741100bbc3b0b490b098bac4ce94aced"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@tanstack/query-core@5.62.0",
+      "type": "library",
+      "name": "@tanstack/query-core",
+      "version": "5.62.0",
+      "scope": "required",
+      "author": "tannerlinsley",
+      "description": "The framework agnostic core that powers TanStack Query",
+      "purl": "pkg:npm/%40tanstack/query-core@5.62.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@tanstack/query-core/-/query-core-5.62.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/TanStack/query.git"
+        },
+        {
+          "type": "website",
+          "url": "https://tanstack.com/query"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/TanStack/query/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b31dfc6c6aea17d6e8a7dd805cebf30ebd0bf5f5836ace735dd3e09716bd72ea9e552592ee563a3a757297fa2875f5e380e19193bf487c2a60566c6b6c7b851e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@tanstack/react-query@5.62.0",
+      "type": "library",
+      "name": "@tanstack/react-query",
+      "version": "5.62.0",
+      "scope": "required",
+      "author": "tannerlinsley",
+      "description": "Hooks for managing, caching and syncing asynchronous and remote data in React",
+      "purl": "pkg:npm/%40tanstack/react-query@5.62.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@tanstack/react-query/-/react-query-5.62.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/TanStack/query.git"
+        },
+        {
+          "type": "website",
+          "url": "https://tanstack.com/query"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/TanStack/query/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b63da5b63027d9addfb3e0eaa2796fb3a1b22d0fcb295244d83552616fbca49dcfebf542546adfaafe5411c86694feed2cebefb5970eb92c88da8a15951e58ab"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/d3-array@3.2.2",
+      "type": "library",
+      "name": "@types/d3-array",
+      "version": "3.2.2",
+      "scope": "required",
+      "description": "TypeScript definitions for d3-array",
+      "purl": "pkg:npm/%40types/d3-array@3.2.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/d3-array/-/d3-array-3.2.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-array"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "84e2d655b9bbb91cdad01617a48216e69c5faca7b45be0f996b162004611fa96fac373764b048c6896d77547d212ff9d4f831f1c12ed9f98ecd0b01668eea8b7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/d3-color@3.1.3",
+      "type": "library",
+      "name": "@types/d3-color",
+      "version": "3.1.3",
+      "scope": "required",
+      "description": "TypeScript definitions for d3-color",
+      "purl": "pkg:npm/%40types/d3-color@3.1.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/d3-color/-/d3-color-3.1.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-color"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "88ef74b1cb61f5601b9a0bfba20a2ae7b3bd6292a61416e6a04a021c3076c4c058d3efca56ba806820f2084d7a754b2978ebc8c4515123ed2c12da83ab2d9be0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/d3-ease@3.0.2",
+      "type": "library",
+      "name": "@types/d3-ease",
+      "version": "3.0.2",
+      "scope": "required",
+      "description": "TypeScript definitions for d3-ease",
+      "purl": "pkg:npm/%40types/d3-ease@3.0.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/d3-ease/-/d3-ease-3.0.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-ease"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "35c5752633b9a03ce82b6ea83336c82c4e875bbb955ce1cb42f1ec841516e1431d6467e263abf905e43087d6bdb42ceff8279e7d940726de524602b5e7846d88"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/d3-interpolate@3.0.4",
+      "type": "library",
+      "name": "@types/d3-interpolate",
+      "version": "3.0.4",
+      "scope": "required",
+      "description": "TypeScript definitions for d3-interpolate",
+      "purl": "pkg:npm/%40types/d3-interpolate@3.0.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/d3-interpolate/-/d3-interpolate-3.0.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-interpolate"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9a02cf11396ba55575611248825af8133e3b83b6318e5d658fb60ab223026f6ed5247f56f0d54ce816fd77c924a46fee0104b90266c0e3cab6200a2528aa3530"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/d3-path@3.1.1",
+      "type": "library",
+      "name": "@types/d3-path",
+      "version": "3.1.1",
+      "scope": "required",
+      "description": "TypeScript definitions for d3-path",
+      "purl": "pkg:npm/%40types/d3-path@3.1.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/d3-path/-/d3-path-3.1.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-path"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "54c64163242f6c6996c9655e6b4107b3f0702e0c5cf8c2a2d732c308e364b28cc8e1824c713b7c644b8847849bd4c31313c30c5b8f6fd08c08e7e6fb4667d696"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/d3-scale@4.0.9",
+      "type": "library",
+      "name": "@types/d3-scale",
+      "version": "4.0.9",
+      "scope": "required",
+      "description": "TypeScript definitions for d3-scale",
+      "purl": "pkg:npm/%40types/d3-scale@4.0.9",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/d3-scale/-/d3-scale-4.0.9.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-scale"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "74b9adc01f3390078efe3b8031f9d5fac22d2a396cc3694a759555cba2d1af470199e8314800622c4a4656648927c3b4f22e3eb0647aa90b5be96b6ec0976f57"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/d3-shape@3.2.0",
+      "type": "library",
+      "name": "@types/d3-shape",
+      "version": "3.2.0",
+      "scope": "required",
+      "description": "TypeScript definitions for d3-shape",
+      "purl": "pkg:npm/%40types/d3-shape@3.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/d3-shape/-/d3-shape-3.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-shape"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "91577be2d6bd7a87f77893af6cd775bc6292fd711147241b4f6e8e83ade122cbc33bce1c8c3e6010e86c5dfdbac37152a0d94f573f380ce15c2affe8a2ef9f33"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/d3-time@3.0.4",
+      "type": "library",
+      "name": "@types/d3-time",
+      "version": "3.0.4",
+      "scope": "required",
+      "description": "TypeScript definitions for d3-time",
+      "purl": "pkg:npm/%40types/d3-time@3.0.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/d3-time/-/d3-time-3.0.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-time"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "caecd9ba0d6790001a0650418a42994e0cc2780fa4d6ecb8645c1600d39f2b0e73e4b46157480d03b80d90a9bb1e82be1d1374c17dc49311a4d1fa5b5a1981ee"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/d3-timer@3.0.2",
+      "type": "library",
+      "name": "@types/d3-timer",
+      "version": "3.0.2",
+      "scope": "required",
+      "description": "TypeScript definitions for d3-timer",
+      "purl": "pkg:npm/%40types/d3-timer@3.0.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/d3-timer/-/d3-timer-3.0.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/d3-timer"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3ecdd3f04f1d6436a6e9f5323623247a42b75d4b1a5048a4fa274ef7f6233ed7e3daaaee17cb450574bb5e1b44e2221704bc6198b8cfdd25e92e155fdb523d2f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "aria-hidden@1.2.6",
+      "type": "library",
+      "name": "aria-hidden",
+      "version": "1.2.6",
+      "scope": "required",
+      "author": "Anton Korzunov",
+      "description": "Cast aria-hidden to everything, except...",
+      "purl": "pkg:npm/aria-hidden@1.2.6",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.6.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/theKashey/aria-hidden.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/theKashey/aria-hidden#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/theKashey/aria-hidden/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "8a4dd9802f5d63f95855533ef8e212b1a6037a0d6d6f456d3f9b8bde8ba1d64a0639a50c0cfa5b1487a2e099058a659414f9fdd2c6cc34c5d000854e96760a24"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "class-variance-authority@0.7.1",
+      "type": "library",
+      "name": "class-variance-authority",
+      "version": "0.7.1",
+      "scope": "required",
+      "author": "Joe Bell",
+      "description": "Class Variance Authority 🧬",
+      "purl": "pkg:npm/class-variance-authority@0.7.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/class-variance-authority/-/class-variance-authority-0.7.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/joe-bell/cva.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/joe-bell/cva#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/joe-bell/cva/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "29afbd4ebbadbfb1bc33a593e927a2456cfbf762b9a84a881841b35ca84013ac4e58063aa4f1fc53ef48637a0232fea4a9398bb2fed787fdb0d918a091e3ccb2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "clsx@2.1.1",
+      "type": "library",
+      "name": "clsx",
+      "version": "2.1.1",
+      "scope": "required",
+      "author": "Luke Edwards",
+      "description": "A tiny (239B) utility for constructing className strings conditionally.",
+      "purl": "pkg:npm/clsx@2.1.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/lukeed/clsx.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/lukeed/clsx#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/lukeed/clsx/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7989b441606d52b0566561b4777f3a386030d7a67df793e2395a3607b6e35926c779d1a5e5ed1959aabae6438681448d7ac1080e407d2126d383f24af5d84264"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-array@3.2.4",
+      "type": "library",
+      "name": "d3-array",
+      "version": "3.2.4",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "Array manipulation, ordering, searching, summarizing, etc.",
+      "purl": "pkg:npm/d3-array@3.2.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-array/-/d3-array-3.2.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-array.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-array/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-array/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b5d4009b2035f22e09ef0a6ba58abc0a5731672dd20b7d5031e072c8217246dec1547751110679969ce87b998511865459efa8abc1c1be4f498e989bc8457826"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-color@3.1.0",
+      "type": "library",
+      "name": "d3-color",
+      "version": "3.1.0",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "Color spaces! RGB, HSL, Cubehelix, Lab and HCL (Lch).",
+      "purl": "pkg:npm/d3-color@3.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-color/-/d3-color-3.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-color.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-color/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-color/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ce0fdc85b5f2781b4c4352db0ff592a16d83a42dc8d26a663dd5beca74538ffc760c0598ac863ba9e6481e2768cf0576e26e226afaf5e653702302f14663b184"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-ease@3.0.1",
+      "type": "library",
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "Easing functions for smooth animation.",
+      "purl": "pkg:npm/d3-ease@3.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-ease/-/d3-ease-3.0.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-ease.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-ease/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-ease/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c11fd72b70f75dc2c8670a5bbd0c10e5f2bef1891db358a9ec0d93c5ed32c6771749dab52fdb24706edb95c79d90e5fe65c83118098b5f516b4466c00f0ce2d3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-format@3.1.2",
+      "type": "library",
+      "name": "d3-format",
+      "version": "3.1.2",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "Format numbers for human consumption.",
+      "purl": "pkg:npm/d3-format@3.1.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-format/-/d3-format-3.1.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-format.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-format/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-format/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0090dd60e767c910d5e5be80ae297308f3f07357a3907728c856abaa53ea4fbcd162385abdc4f7b92aea70cbec821d828283db2b7442c321da572c5870fd80ae"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-interpolate@3.0.1",
+      "type": "library",
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "Interpolate numbers, colors, strings, arrays, objects, whatever!",
+      "purl": "pkg:npm/d3-interpolate@3.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-interpolate/-/d3-interpolate-3.0.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-interpolate.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-interpolate/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-interpolate/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ddb62cd6b383df7ba8f1aa897ca3f72563c089b830f199b6f8bf6f04a107276460faf89347ba39326bf999972278df854586803965f94890135fa9353d6cfbda"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-path@3.1.0",
+      "type": "library",
+      "name": "d3-path",
+      "version": "3.1.0",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "Serialize Canvas path commands to SVG.",
+      "purl": "pkg:npm/d3-path@3.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-path/-/d3-path-3.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-path.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-path/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-path/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a7728fe4709ffdbbe305248ab9789de99aa28f1ef021f356f89fe668fb3e8b0477e5ab792426cb513d0bcc5d5c9e36c21d686acd04c83762697bca5179b20415"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-scale@4.0.2",
+      "type": "library",
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "Encodings that map abstract data to visual representation.",
+      "purl": "pkg:npm/d3-scale@4.0.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-scale/-/d3-scale-4.0.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-scale.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-scale/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-scale/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1995b8eb8835487eda83763b8578dff11a14b80148aa494e02adcc465e0e69669b4c5258f4f37f1356249615cb87e390ddf33dc92da73a40a84be58b67a92fc5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-shape@3.2.0",
+      "type": "library",
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "Graphical primitives for visualization, such as lines and areas.",
+      "purl": "pkg:npm/d3-shape@3.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-shape/-/d3-shape-3.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-shape.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-shape/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-shape/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "49a2c1bb01a6dcc395891ab600193778ba31c1910ba47eb3865dc56c0a09ed59b58287cac7a125d486f9cf6dcd504845f40b0697bcbe7732dee42c36000ac64c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-time@3.1.0",
+      "type": "library",
+      "name": "d3-time",
+      "version": "3.1.0",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "A calculator for humanity’s peculiar conventions of time.",
+      "purl": "pkg:npm/d3-time@3.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-time/-/d3-time-3.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-time.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-time/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-time/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "56a2a3cc12de8db48c4f82206e65600e3a6462b3565182676c21a8f3be2eecc30a216b082d15fe3a95ff81393c32a8e94f503f73a1d8d9d080efb64dd25910d9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-time-format@4.1.0",
+      "type": "library",
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "A JavaScript time formatter and parser inspired by strftime and strptime.",
+      "purl": "pkg:npm/d3-time-format@4.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-time-format/-/d3-time-format-4.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-time-format.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-time-format/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-time-format/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "749c4f065cc2ecdba00763c32f0a3d43c2624d1dccddee3f5c0364ade29253117cbef5caaa6d587eae10e5d97c6ee765ba745595451a0d4805b7b780f03e8d2e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "d3-timer@3.0.1",
+      "type": "library",
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "An efficient queue capable of managing thousands of concurrent animations.",
+      "purl": "pkg:npm/d3-timer@3.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/d3-timer/-/d3-timer-3.0.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/d3/d3-timer.git"
+        },
+        {
+          "type": "website",
+          "url": "https://d3js.org/d3-timer/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/d3/d3-timer/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9dd7c9fc9c7131dde7c37d6ec8aa18da76a2bc5fabdbd57e2dcd2cbd9c5ed49bef2119a2f2152caccbdd3b0812d68eae0479a2cfdd60790d3294f3f46a3d5550"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "decimal.js-light@2.5.1",
+      "type": "library",
+      "name": "decimal.js-light",
+      "version": "2.5.1",
+      "scope": "required",
+      "author": "Michael Mclaughlin",
+      "description": "An arbitrary-precision Decimal type for JavaScript.",
+      "purl": "pkg:npm/decimal.js-light@2.5.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/decimal.js-light/-/decimal.js-light-2.5.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/MikeMcl/decimal.js-light.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/MikeMcl/decimal.js-light#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/MikeMcl/decimal.js-light/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a88305a533199a7cbe30c222b4007a0fb8953c4a2b570e984115a4bdaad3913e2d05e48b2e21f37308faab4326612142895a62a8f253244608ae970fcd5108be"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "detect-node-es@1.1.0",
+      "type": "library",
+      "name": "detect-node-es",
+      "version": "1.1.0",
+      "scope": "required",
+      "author": "Ilya Kantor",
+      "description": "Detect Node.JS (as opposite to browser environment). ESM modification",
+      "purl": "pkg:npm/detect-node-es@1.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/detect-node-es/-/detect-node-es-1.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/thekashey/detect-node.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/thekashey/detect-node"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/thekashey/detect-node/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ca9766254fd36c16f2d83c626eebfb64b5b706cd5012633b9c78c400d7e88492ef1345d5ba38ac9f5a8f25c67183ea83b9cb2bf9b3fa7cb0f5acf4b702127b11"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "dom-helpers@5.2.1",
+      "type": "library",
+      "name": "dom-helpers",
+      "version": "5.2.1",
+      "scope": "required",
+      "author": "Jason Quense",
+      "description": "tiny modular DOM lib for ie9+",
+      "purl": "pkg:npm/dom-helpers@5.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/dom-helpers/-/dom-helpers-5.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/react-bootstrap/dom-helpers.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/react-bootstrap/dom-helpers#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/react-bootstrap/dom-helpers/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9d109aec22b7553accd8d986908cb871b2bb219960044fcf60c9f9e6bad779faf9c570cfd0b76d7cf9db9450e855d7007ec949ee8afa8aa0149f1d0208621640"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "eventemitter3@4.0.7",
+      "type": "library",
+      "name": "eventemitter3",
+      "version": "4.0.7",
+      "scope": "required",
+      "author": "Arnout Kazemier",
+      "description": "EventEmitter3 focuses on performance while maintaining a Node.js AND browser compatible interface.",
+      "purl": "pkg:npm/eventemitter3@4.0.7",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git://github.com/primus/eventemitter3.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/primus/eventemitter3#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/primus/eventemitter3/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f20b870590b02a716161d1ebdb2b2e45612b4f08683765fc5c42d196b470a667de6368e3b94378b5a40cb142ca515a352b80ef665fb4a607f2a32b07c6f9af13"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "fast-equals@5.4.5",
+      "type": "library",
+      "name": "fast-equals",
+      "version": "5.4.5",
+      "scope": "required",
+      "author": "Tony Quetano",
+      "description": "A blazing fast equality comparison, either shallow or deep",
+      "purl": "pkg:npm/fast-equals@5.4.5",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/fast-equals/-/fast-equals-5.4.5.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/planttheidea/fast-equals.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/planttheidea/fast-equals#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/planttheidea/fast-equals/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c8a129705b913eefe94d02f6541f18284db216576b2e522ca16b497819c076a121beedb53a09054f40bc9e37ffc587362d264612bdcaf491a3b611c9c6754bbd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "framer-motion@14.6.0",
+      "type": "library",
+      "name": "framer-motion",
+      "version": "14.6.0",
+      "scope": "required",
+      "author": "Matt Perry",
+      "description": "A simple and powerful JavaScript animation library",
+      "purl": "pkg:npm/framer-motion@14.6.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/framer-motion/-/framer-motion-14.6.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/motiondivision/motion.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/motiondivision/motion#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/motiondivision/motion/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3330606711a0a073df48b1179a8e28e57959bdbfa755115d1ed1a35619ba2cc20424a4edffc84d3b4db77ae2f9998cb373c96557f8504df8e737af2d3511da97"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "get-nonce@1.0.1",
+      "type": "library",
+      "name": "get-nonce",
+      "version": "1.0.1",
+      "scope": "required",
+      "author": "Anton Korzunov",
+      "description": "returns nonce",
+      "purl": "pkg:npm/get-nonce@1.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/get-nonce/-/get-nonce-1.0.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+ssh://git@github.com/theKashey/get-nonce.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/theKashey/get-nonce"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/theKashey/get-nonce/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1498584680da89ab5f12450af072a589c9aeff7486143e75ab78ad2831a8493cac4090677ce7315391b19e113513ab2807be8c6d3d0c06d9ca26e5f2031fbde9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "internmap@2.0.3",
+      "type": "library",
+      "name": "internmap",
+      "version": "2.0.3",
+      "scope": "required",
+      "author": "Mike Bostock",
+      "description": "Map and Set with automatic key interning",
+      "purl": "pkg:npm/internmap@2.0.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/internmap/-/internmap-2.0.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/mbostock/internmap.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/mbostock/internmap/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/mbostock/internmap/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e4787b635c106ef639a281a03db0da2f98982c03f331352b8ccba5b241cb1fac27bff03ed6ae6b8046a2baa12307ea3119721566cd4517e47f28f37765241862"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "lucide-react@0.468.0",
+      "type": "library",
+      "name": "lucide-react",
+      "version": "0.468.0",
+      "scope": "required",
+      "author": "Eric Fennis",
+      "description": "A Lucide icon library package for React applications",
+      "purl": "pkg:npm/lucide-react@0.468.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/lucide-react/-/lucide-react-0.468.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/lucide-icons/lucide.git"
+        },
+        {
+          "type": "website",
+          "url": "https://lucide.dev"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/lucide-icons/lucide/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ea4a184619ccd8dd0619921d5f349e88dc20bafd60b7f1408d93a23e5efaae8062df12845dae1699fa71810c134cbe0a8a95e379fae77f7a15e08b18862e0914"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "motion@14.6.0",
+      "type": "library",
+      "name": "motion",
+      "version": "14.6.0",
+      "scope": "required",
+      "author": "Matt Perry",
+      "description": "An animation library for JavaScript and React.",
+      "purl": "pkg:npm/motion@14.6.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/motion/-/motion-14.6.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/motiondivision/motion.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/motiondivision/motion#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/motiondivision/motion/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "aaa6996f2b9b824ef1df3c633e03f597706bfca417a25fc8215d6ea9bdf9f12a0de00a5ca8db95efec320cf83f5cb12b9aec902f994bf09548fdf3a60ec98129"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "motion-dom@14.6.0",
+      "type": "library",
+      "name": "motion-dom",
+      "version": "14.6.0",
+      "scope": "required",
+      "author": "Matt Perry",
+      "purl": "pkg:npm/motion-dom@14.6.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/motion-dom/-/motion-dom-14.6.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/motiondivision/motion.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/motiondivision/motion#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/motiondivision/motion/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "948a234e5f5a6123c891e38e4b30658b2d6736fa5d3b726d5735b65a04d742538fe1932e261b563b77cfece0f84d5170951b9c76fc650d23242fe7c4427439d8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "motion-utils@14.6.0",
+      "type": "library",
+      "name": "motion-utils",
+      "version": "14.6.0",
+      "scope": "required",
+      "author": "Matt Perry",
+      "purl": "pkg:npm/motion-utils@14.6.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/motion-utils/-/motion-utils-14.6.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/motiondivision/motion.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/motiondivision/motion#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/motiondivision/motion/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6d9268d80990d9a38591a6ada3a557ad36e43c6d1784cce2bd651649a239f69c729658fc40c414159f383184509cf90afbb76be0a95dc89c05dbe44cd2c76aff"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "prop-types@15.8.1",
+      "type": "library",
+      "name": "prop-types",
+      "version": "15.8.1",
+      "scope": "required",
+      "description": "Runtime type checking for React props and similar objects.",
+      "purl": "pkg:npm/prop-types@15.8.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/facebook/prop-types.git"
+        },
+        {
+          "type": "website",
+          "url": "https://facebook.github.io/react/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/facebook/prop-types/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a23f3b0a064809dba5528868815011ec08e50b4df6ed4e1e9782fa780bcea827ae74c0d553435384d695f9bf437f87578123f58173139cf7617deff6a831f972"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-is@16.13.1",
+      "type": "library",
+      "name": "react-is",
+      "version": "16.13.1",
+      "scope": "required",
+      "description": "Brand checking of React Elements.",
+      "purl": "pkg:npm/react-is@16.13.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/facebook/react.git"
+        },
+        {
+          "type": "website",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/facebook/react/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "db87baca71361fe38ab7892ab0ebcd77c901a55eb9ce8c5b038055b04381dc0455590922fc31f3694a02e4ab8e37f06271c0da0824d906e39c7d9b3bd2447c6d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-remove-scroll@2.7.2",
+      "type": "library",
+      "name": "react-remove-scroll",
+      "version": "2.7.2",
+      "scope": "required",
+      "author": "Anton Korzunov",
+      "description": "Disables scroll outside of `children` node.",
+      "purl": "pkg:npm/react-remove-scroll@2.7.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.7.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/theKashey/react-remove-scroll.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/theKashey/react-remove-scroll#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/theKashey/react-remove-scroll/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "22a6fd3630824ede877febce74d21919d4e21f5412aabdbb1ff124f6cbff6bdee07ee788ff9875b37c918b59e783331468e393a229f9748d5d5ca757885faed1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-remove-scroll-bar@2.3.8",
+      "type": "library",
+      "name": "react-remove-scroll-bar",
+      "version": "2.3.8",
+      "scope": "required",
+      "author": "Anton Korzunov",
+      "description": "Removes body scroll without content _shake_",
+      "purl": "pkg:npm/react-remove-scroll-bar@2.3.8",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.8.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/theKashey/react-remove-scroll-bar.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/theKashey/react-remove-scroll-bar#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/theKashey/react-remove-scroll-bar/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f6bfb28bdfa6814df700a723e886d3f684423bbf16ae24a3eadfdc17c0d605927d68e18f393103bdd503cf51702a29bb4175b0987aad7479d125f840c441b8e9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-router@6.30.6",
+      "type": "library",
+      "name": "react-router",
+      "version": "6.30.6",
+      "scope": "required",
+      "author": "Remix Software",
+      "description": "Declarative routing for React",
+      "purl": "pkg:npm/react-router@6.30.6",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-router/-/react-router-6.30.6.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/remix-run/react-router.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/remix-run/react-router#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/remix-run/react-router/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e477caee4e629bb2d3381d04a824267efcb80b5dc6f764ac8f55539a8b932b7009bf28ca4e716e095d2f70c003fc94be242e03bc320146b9407892058e1e555a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-router-dom@6.30.6",
+      "type": "library",
+      "name": "react-router-dom",
+      "version": "6.30.6",
+      "scope": "required",
+      "author": "Remix Software",
+      "description": "Declarative routing for React web applications",
+      "purl": "pkg:npm/react-router-dom@6.30.6",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.30.6.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/remix-run/react-router.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/remix-run/react-router#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/remix-run/react-router/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d111ca673ef0c1f7ef914fb6305553d8d9e32b8e2cb0b115fa6d02009692d8ab26a2baf08fb5b11f4d233b448e096dbafed20d5272474e85db943b37dc8dfc61"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-smooth@4.0.4",
+      "type": "library",
+      "name": "react-smooth",
+      "version": "4.0.4",
+      "scope": "required",
+      "author": "JasonHzq",
+      "description": "react animation library",
+      "purl": "pkg:npm/react-smooth@4.0.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-smooth/-/react-smooth-4.0.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/recharts/react-smooth.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/recharts/react-smooth#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/recharts/react-smooth/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "82718a4e9630a8bd088a2d3d807a1b36896f5f82a2ab83cac7a7960426188b1fbc71dc3e706a37768f74ea5d4d04f2a4496c750e0842d5d9561bd2f6b8677ad5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-style-singleton@2.2.3",
+      "type": "library",
+      "name": "react-style-singleton",
+      "version": "2.2.3",
+      "scope": "required",
+      "author": "Anton Korzunov",
+      "description": "Just create a single stylesheet...",
+      "purl": "pkg:npm/react-style-singleton@2.2.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/theKashey/react-style-singleton.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/theKashey/react-style-singleton#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/theKashey/react-style-singleton/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6fa8d2bf1bd59f2a6d0222e36e458b13f94e9d1e257d3b43025f9e502ed1672f9041673ac11cc8576084eb106e3260f1736a888a1b430990f934f38597b7d105"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-transition-group@4.4.5",
+      "type": "library",
+      "name": "react-transition-group",
+      "version": "4.4.5",
+      "scope": "required",
+      "description": "A react component toolset for managing animations",
+      "purl": "pkg:npm/react-transition-group@4.4.5",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.5.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/reactjs/react-transition-group.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/reactjs/react-transition-group#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/reactjs/react-transition-group/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a5971dd4c089a222a2051d8d471782460d77b825dbc9d3e7981e0439e46b63be3cd2a3563bc2088101bace50e49bab9132c5115cfb8aab4196b62339f5ae50ea"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "recharts@2.15.0",
+      "type": "library",
+      "name": "recharts",
+      "version": "2.15.0",
+      "scope": "required",
+      "author": "recharts group",
+      "description": "React charts",
+      "purl": "pkg:npm/recharts@2.15.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/recharts/-/recharts-2.15.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/recharts/recharts.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/recharts/recharts"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/recharts/recharts/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "708bccc437e9026a8099581ce326fba609bf3b5b669a497f0a3aef5ee5beeb6ffeee38ff885f58926fa16ff509b78d934441ccc9dde06fea648286b633180323"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "recharts-scale@0.4.5",
+      "type": "library",
+      "name": "recharts-scale",
+      "version": "0.4.5",
+      "scope": "required",
+      "author": "recharts group",
+      "description": "Scale of Cartesian Coordinates",
+      "purl": "pkg:npm/recharts-scale@0.4.5",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/recharts-scale/-/recharts-scale-0.4.5.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/recharts/recharts-scale.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/recharts/recharts-scale"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/recharts/recharts-scale/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "922bcd14efb439c50dbbb8d0aae2d7031cf5148c198fc9eb8fe62438a739ebde0d6e30af713e9a499888ccdcddd8aba5e28e2b4eda3c41547d94c36dc43e06d7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-is@18.3.1",
+      "type": "library",
+      "name": "react-is",
+      "version": "18.3.1",
+      "scope": "required",
+      "description": "Brand checking of React Elements.",
+      "purl": "pkg:npm/react-is@18.3.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/facebook/react.git"
+        },
+        {
+          "type": "website",
+          "url": "https://reactjs.org/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/facebook/react/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fcb2cc5726acd258e302da1888fa9888bf15597cd451d4e1ae6539fa7db40d9bfe6be0a54687af533c3927153e21e879fdcf3bcada13055f46d4588a7cd25d9a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "tailwind-merge@2.5.5",
+      "type": "library",
+      "name": "tailwind-merge",
+      "version": "2.5.5",
+      "scope": "required",
+      "author": "Dany Castillo",
+      "description": "Merge Tailwind CSS classes without style conflicts",
+      "purl": "pkg:npm/tailwind-merge@2.5.5",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-2.5.5.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/dcastil/tailwind-merge.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/dcastil/tailwind-merge"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/dcastil/tailwind-merge/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d0b5ee9f3cc0673a34b443f1577236f7b7df2993e5283ae38fb357a610bc5796a4f721c2e73466c6739eda6fd177fee2bec38c25edc9676255a1ca037504d104"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "tailwindcss-animate@1.0.7",
+      "type": "library",
+      "name": "tailwindcss-animate",
+      "version": "1.0.7",
+      "scope": "required",
+      "author": "Jamie Kyle",
+      "description": "A Tailwind CSS plugin for creating beautiful animations.",
+      "purl": "pkg:npm/tailwindcss-animate@1.0.7",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tailwindcss-animate/-/tailwindcss-animate-1.0.7.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6e5ea6a47dd3ec8dd4171baf0c45cbc72fd5b85c419396dbce9961eed5c8ebc9b032890d61dd6df6a3c11e59f24f07dae09182e333f9d7a23585862d43fbeca4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "tiny-invariant@1.3.3",
+      "type": "library",
+      "name": "tiny-invariant",
+      "version": "1.3.3",
+      "scope": "required",
+      "author": "Alex Reardon",
+      "description": "A tiny invariant function",
+      "purl": "pkg:npm/tiny-invariant@1.3.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.3.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/alexreardon/tiny-invariant.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/alexreardon/tiny-invariant#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/alexreardon/tiny-invariant/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f856c13c4d68f50018bef89abbfa82e5213771ac36d6adf192f58a06d8dae6f82a3962071c9de2a1aab554f7e7fd2cea72dcf66d4fe861e29df7fcf904bf8f56"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "tslib@2.8.1",
+      "type": "library",
+      "name": "tslib",
+      "version": "2.8.1",
+      "scope": "required",
+      "author": "Microsoft Corp.",
+      "description": "Runtime library for TypeScript helper functions",
+      "purl": "pkg:npm/tslib@2.8.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/Microsoft/tslib.git"
+        },
+        {
+          "type": "website",
+          "url": "https://www.typescriptlang.org/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/Microsoft/TypeScript/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a0916ef781d06fe29576e49440bef09e99aa9df98bb0e03f9c087a6fa107d30084a0ad3f98f79753a737c0a0d5f373243ae1cf447b525ca294f7d2016b34bfdb"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "0BSD"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "use-callback-ref@1.3.3",
+      "type": "library",
+      "name": "use-callback-ref",
+      "version": "1.3.3",
+      "scope": "required",
+      "author": "theKashey",
+      "description": "The same useRef, but with callback",
+      "purl": "pkg:npm/use-callback-ref@1.3.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/use-callback-ref/-/use-callback-ref-1.3.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/theKashey/use-callback-ref.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/theKashey/use-callback-ref#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/theKashey/use-callback-ref/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "8d02f79519e871a16dbb7574d094e8633ff8424356b30c628c368254d6518914cedc74032ec76ed59b66214bd5e323e9fabbd69b98f4cb44c6fd2eb572e8a34e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "use-sidecar@1.1.3",
+      "type": "library",
+      "name": "use-sidecar",
+      "version": "1.1.3",
+      "scope": "required",
+      "author": "theKashey",
+      "description": "Sidecar code splitting utils",
+      "purl": "pkg:npm/use-sidecar@1.1.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/use-sidecar/-/use-sidecar-1.1.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/theKashey/use-sidecar.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/theKashey/use-sidecar"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/theKashey/use-sidecar/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "15e770d1a66f921ca7a0f625039597acc080326fa7496759b7a973250ece93c4ba43e56c1e61e94569dd55127c05ed196e47cf7392d1607fb95ebcd770478b45"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "victory-vendor@36.9.2",
+      "type": "library",
+      "name": "victory-vendor",
+      "version": "36.9.2",
+      "scope": "required",
+      "author": "Formidable",
+      "description": "Vendored dependencies for Victory",
+      "purl": "pkg:npm/victory-vendor@36.9.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/victory-vendor/-/victory-vendor-36.9.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/FormidableLabs/victory.git"
+        },
+        {
+          "type": "website",
+          "url": "https://commerce.nearform.com/open-source/victory"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/FormidableLabs/victory/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3e7a5040cbb197061da1c0bc7c826a557be4795887633a2d23e349ac2b9abf4658168abdd76647064de609eba3fb9fd5a6874e8cf7b5cf4164da2860ce55ea8d"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT AND ISC"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "nadi-web@1.0.0",
+      "dependsOn": [
+        "@fontsource-variable/inter@5.1.0",
+        "@radix-ui/react-dialog@1.3.1",
+        "@radix-ui/react-dropdown-menu@2.2.1",
+        "@radix-ui/react-scroll-area@1.4.0",
+        "@radix-ui/react-select@2.4.1",
+        "@radix-ui/react-separator@1.2.0",
+        "@radix-ui/react-slot@1.5.0",
+        "@radix-ui/react-switch@1.4.1",
+        "@radix-ui/react-tabs@1.2.1",
+        "@radix-ui/react-toggle@1.2.1",
+        "@radix-ui/react-toggle-group@1.2.1",
+        "@radix-ui/react-tooltip@1.4.1",
+        "@tanstack/react-query@5.62.0",
+        "class-variance-authority@0.7.1",
+        "clsx@2.1.1",
+        "lucide-react@0.468.0",
+        "motion@14.6.0",
+        "react-router-dom@6.30.6",
+        "recharts@2.15.0",
+        "tailwind-merge@2.5.5",
+        "tailwindcss-animate@1.0.7"
+      ]
+    },
+    {
+      "ref": "@floating-ui/core@1.8.0",
+      "dependsOn": [
+        "@floating-ui/utils@0.2.12"
+      ]
+    },
+    {
+      "ref": "@floating-ui/dom@1.8.0",
+      "dependsOn": [
+        "@floating-ui/core@1.8.0",
+        "@floating-ui/utils@0.2.12"
+      ]
+    },
+    {
+      "ref": "@floating-ui/react-dom@2.1.9",
+      "dependsOn": [
+        "@floating-ui/dom@1.8.0"
+      ]
+    },
+    {
+      "ref": "@floating-ui/utils@0.2.12",
+      "dependsOn": []
+    },
+    {
+      "ref": "@fontsource-variable/inter@5.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "@radix-ui/number@1.1.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "@radix-ui/primitive@1.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "@radix-ui/react-arrow@1.1.17",
+      "dependsOn": [
+        "@radix-ui/react-primitive@2.2.0"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-collection@1.2.0",
+      "dependsOn": [
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-slot@1.5.0",
+        "@radix-ui/react-use-layout-effect@1.1.4"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-compose-refs@1.1.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "@radix-ui/react-context@1.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "@radix-ui/react-dialog@1.3.1",
+      "dependsOn": [
+        "aria-hidden@1.2.6",
+        "react-remove-scroll@2.7.2",
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-dismissable-layer@1.2.1",
+        "@radix-ui/react-focus-guards@1.2.0",
+        "@radix-ui/react-focus-scope@1.3.1",
+        "@radix-ui/react-id@1.1.4",
+        "@radix-ui/react-portal@1.2.0",
+        "@radix-ui/react-presence@1.1.11",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-slot@1.5.0",
+        "@radix-ui/react-use-controllable-state@1.3.0",
+        "@radix-ui/react-use-layout-effect@1.1.4"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-direction@1.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "@radix-ui/react-dismissable-layer@1.2.1",
+      "dependsOn": [
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-use-callback-ref@1.1.5",
+        "@radix-ui/react-use-effect-event@0.0.5"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-dropdown-menu@2.2.1",
+      "dependsOn": [
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-id@1.1.4",
+        "@radix-ui/react-menu@2.2.1",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-use-controllable-state@1.3.0"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-focus-guards@1.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "@radix-ui/react-focus-scope@1.3.1",
+      "dependsOn": [
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-use-callback-ref@1.1.5"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-id@1.1.4",
+      "dependsOn": [
+        "@radix-ui/react-use-layout-effect@1.1.4"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-menu@2.2.1",
+      "dependsOn": [
+        "aria-hidden@1.2.6",
+        "react-remove-scroll@2.7.2",
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-collection@1.2.0",
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-direction@1.2.0",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-focus-guards@1.2.0",
+        "@radix-ui/react-dismissable-layer@1.2.1",
+        "@radix-ui/react-id@1.1.4",
+        "@radix-ui/react-portal@1.2.0",
+        "@radix-ui/react-popper@1.4.0",
+        "@radix-ui/react-presence@1.1.11",
+        "@radix-ui/react-focus-scope@1.3.1",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-slot@1.5.0",
+        "@radix-ui/react-use-callback-ref@1.1.5",
+        "@radix-ui/react-roving-focus@1.2.1"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-popper@1.4.0",
+      "dependsOn": [
+        "@floating-ui/react-dom@2.1.9",
+        "@radix-ui/react-arrow@1.1.17",
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-use-callback-ref@1.1.5",
+        "@radix-ui/react-use-layout-effect@1.1.4",
+        "@radix-ui/react-use-rect@1.1.4",
+        "@radix-ui/react-use-size@1.1.5",
+        "@radix-ui/rect@1.1.3"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-portal@1.2.0",
+      "dependsOn": [
+        "@radix-ui/react-use-layout-effect@1.1.4",
+        "@radix-ui/react-primitive@2.2.0"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-presence@1.1.11",
+      "dependsOn": [
+        "@radix-ui/react-use-layout-effect@1.1.4"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-primitive@2.2.0",
+      "dependsOn": [
+        "@radix-ui/react-slot@1.5.0"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-roving-focus@1.2.1",
+      "dependsOn": [
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-collection@1.2.0",
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-direction@1.2.0",
+        "@radix-ui/react-id@1.1.4",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-use-controllable-state@1.3.0",
+        "@radix-ui/react-use-callback-ref@1.1.5",
+        "@radix-ui/react-use-is-hydrated@0.1.3",
+        "@radix-ui/react-use-layout-effect@1.1.4"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-scroll-area@1.4.0",
+      "dependsOn": [
+        "@radix-ui/number@1.1.3",
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-direction@1.2.0",
+        "@radix-ui/react-presence@1.1.11",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-slot@1.5.0",
+        "@radix-ui/react-use-callback-ref@1.1.5",
+        "@radix-ui/react-use-layout-effect@1.1.4"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-select@2.4.1",
+      "dependsOn": [
+        "aria-hidden@1.2.6",
+        "react-remove-scroll@2.7.2",
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-collection@1.2.0",
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-dismissable-layer@1.2.1",
+        "@radix-ui/react-focus-guards@1.2.0",
+        "@radix-ui/react-focus-scope@1.3.1",
+        "@radix-ui/react-id@1.1.4",
+        "@radix-ui/number@1.1.3",
+        "@radix-ui/react-popper@1.4.0",
+        "@radix-ui/react-portal@1.2.0",
+        "@radix-ui/react-direction@1.2.0",
+        "@radix-ui/react-presence@1.1.11",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-slot@1.5.0",
+        "@radix-ui/react-use-callback-ref@1.1.5",
+        "@radix-ui/react-visually-hidden@1.2.13",
+        "@radix-ui/react-use-layout-effect@1.1.4",
+        "@radix-ui/react-use-controllable-state@1.3.0"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-separator@1.2.0",
+      "dependsOn": [
+        "@radix-ui/react-primitive@2.2.0"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-slot@1.5.0",
+      "dependsOn": [
+        "@radix-ui/react-compose-refs@1.1.5"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-switch@1.4.1",
+      "dependsOn": [
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-use-controllable-state@1.3.0",
+        "@radix-ui/react-use-size@1.1.5"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-tabs@1.2.1",
+      "dependsOn": [
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-direction@1.2.0",
+        "@radix-ui/react-id@1.1.4",
+        "@radix-ui/react-presence@1.1.11",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-roving-focus@1.2.1",
+        "@radix-ui/react-use-controllable-state@1.3.0"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-toggle@1.2.1",
+      "dependsOn": [
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-use-controllable-state@1.3.0"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-toggle-group@1.2.1",
+      "dependsOn": [
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-direction@1.2.0",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-roving-focus@1.2.1",
+        "@radix-ui/react-toggle@1.2.1",
+        "@radix-ui/react-use-controllable-state@1.3.0"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-tooltip@1.4.1",
+      "dependsOn": [
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-compose-refs@1.1.5",
+        "@radix-ui/react-context@1.3.0",
+        "@radix-ui/react-dismissable-layer@1.2.1",
+        "@radix-ui/react-focus-scope@1.3.1",
+        "@radix-ui/react-id@1.1.4",
+        "@radix-ui/react-popper@1.4.0",
+        "@radix-ui/react-portal@1.2.0",
+        "@radix-ui/react-presence@1.1.11",
+        "@radix-ui/react-primitive@2.2.0",
+        "@radix-ui/react-slot@1.5.0",
+        "@radix-ui/react-use-controllable-state@1.3.0",
+        "@radix-ui/react-use-layout-effect@1.1.4",
+        "@radix-ui/react-visually-hidden@1.2.13"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-use-callback-ref@1.1.5",
+      "dependsOn": [
+        "@radix-ui/react-use-layout-effect@1.1.4"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-use-controllable-state@1.3.0",
+      "dependsOn": [
+        "@radix-ui/react-use-layout-effect@1.1.4",
+        "@radix-ui/primitive@1.2.0",
+        "@radix-ui/react-use-effect-event@0.0.5"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-use-effect-event@0.0.5",
+      "dependsOn": [
+        "@radix-ui/react-use-layout-effect@1.1.4"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-use-is-hydrated@0.1.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "@radix-ui/react-use-layout-effect@1.1.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "@radix-ui/react-use-rect@1.1.4",
+      "dependsOn": [
+        "@radix-ui/rect@1.1.3"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-use-size@1.1.5",
+      "dependsOn": [
+        "@radix-ui/react-use-layout-effect@1.1.4"
+      ]
+    },
+    {
+      "ref": "@radix-ui/react-visually-hidden@1.2.13",
+      "dependsOn": [
+        "@radix-ui/react-primitive@2.2.0"
+      ]
+    },
+    {
+      "ref": "@radix-ui/rect@1.1.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "@remix-run/router@1.23.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "@tanstack/query-core@5.62.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "@tanstack/react-query@5.62.0",
+      "dependsOn": [
+        "@tanstack/query-core@5.62.0"
+      ]
+    },
+    {
+      "ref": "@types/d3-array@3.2.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "@types/d3-color@3.1.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "@types/d3-ease@3.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "@types/d3-interpolate@3.0.4",
+      "dependsOn": [
+        "@types/d3-color@3.1.3"
+      ]
+    },
+    {
+      "ref": "@types/d3-path@3.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "@types/d3-scale@4.0.9",
+      "dependsOn": [
+        "@types/d3-time@3.0.4"
+      ]
+    },
+    {
+      "ref": "@types/d3-shape@3.2.0",
+      "dependsOn": [
+        "@types/d3-path@3.1.1"
+      ]
+    },
+    {
+      "ref": "@types/d3-time@3.0.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "@types/d3-timer@3.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "aria-hidden@1.2.6",
+      "dependsOn": [
+        "tslib@2.8.1"
+      ]
+    },
+    {
+      "ref": "class-variance-authority@0.7.1",
+      "dependsOn": [
+        "clsx@2.1.1"
+      ]
+    },
+    {
+      "ref": "clsx@2.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "d3-array@3.2.4",
+      "dependsOn": [
+        "internmap@2.0.3"
+      ]
+    },
+    {
+      "ref": "d3-color@3.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "d3-ease@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "d3-format@3.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "d3-interpolate@3.0.1",
+      "dependsOn": [
+        "d3-color@3.1.0"
+      ]
+    },
+    {
+      "ref": "d3-path@3.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "d3-scale@4.0.2",
+      "dependsOn": [
+        "d3-array@3.2.4",
+        "d3-format@3.1.2",
+        "d3-interpolate@3.0.1",
+        "d3-time@3.1.0",
+        "d3-time-format@4.1.0"
+      ]
+    },
+    {
+      "ref": "d3-shape@3.2.0",
+      "dependsOn": [
+        "d3-path@3.1.0"
+      ]
+    },
+    {
+      "ref": "d3-time@3.1.0",
+      "dependsOn": [
+        "d3-array@3.2.4"
+      ]
+    },
+    {
+      "ref": "d3-time-format@4.1.0",
+      "dependsOn": [
+        "d3-time@3.1.0"
+      ]
+    },
+    {
+      "ref": "d3-timer@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "decimal.js-light@2.5.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "detect-node-es@1.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "dom-helpers@5.2.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "eventemitter3@4.0.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "fast-equals@5.4.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "framer-motion@14.6.0",
+      "dependsOn": [
+        "motion-dom@14.6.0",
+        "motion-utils@14.6.0",
+        "tslib@2.8.1"
+      ]
+    },
+    {
+      "ref": "get-nonce@1.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "internmap@2.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "lucide-react@0.468.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "motion@14.6.0",
+      "dependsOn": [
+        "framer-motion@14.6.0",
+        "tslib@2.8.1"
+      ]
+    },
+    {
+      "ref": "motion-dom@14.6.0",
+      "dependsOn": [
+        "motion-utils@14.6.0"
+      ]
+    },
+    {
+      "ref": "motion-utils@14.6.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "prop-types@15.8.1",
+      "dependsOn": [
+        "react-is@16.13.1"
+      ]
+    },
+    {
+      "ref": "react-is@16.13.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "react-remove-scroll@2.7.2",
+      "dependsOn": [
+        "react-remove-scroll-bar@2.3.8",
+        "react-style-singleton@2.2.3",
+        "tslib@2.8.1",
+        "use-callback-ref@1.3.3",
+        "use-sidecar@1.1.3"
+      ]
+    },
+    {
+      "ref": "react-remove-scroll-bar@2.3.8",
+      "dependsOn": [
+        "react-style-singleton@2.2.3",
+        "tslib@2.8.1"
+      ]
+    },
+    {
+      "ref": "react-router@6.30.6",
+      "dependsOn": [
+        "@remix-run/router@1.23.4"
+      ]
+    },
+    {
+      "ref": "react-router-dom@6.30.6",
+      "dependsOn": [
+        "react-router@6.30.6",
+        "@remix-run/router@1.23.4"
+      ]
+    },
+    {
+      "ref": "react-smooth@4.0.4",
+      "dependsOn": [
+        "fast-equals@5.4.5",
+        "prop-types@15.8.1",
+        "react-transition-group@4.4.5"
+      ]
+    },
+    {
+      "ref": "react-style-singleton@2.2.3",
+      "dependsOn": [
+        "tslib@2.8.1",
+        "get-nonce@1.0.1"
+      ]
+    },
+    {
+      "ref": "react-transition-group@4.4.5",
+      "dependsOn": [
+        "dom-helpers@5.2.1",
+        "prop-types@15.8.1"
+      ]
+    },
+    {
+      "ref": "recharts@2.15.0",
+      "dependsOn": [
+        "clsx@2.1.1",
+        "eventemitter3@4.0.7",
+        "react-is@18.3.1",
+        "react-smooth@4.0.4",
+        "recharts-scale@0.4.5",
+        "tiny-invariant@1.3.3",
+        "victory-vendor@36.9.2"
+      ]
+    },
+    {
+      "ref": "recharts-scale@0.4.5",
+      "dependsOn": [
+        "decimal.js-light@2.5.1"
+      ]
+    },
+    {
+      "ref": "react-is@18.3.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "tailwind-merge@2.5.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "tailwindcss-animate@1.0.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "tiny-invariant@1.3.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "tslib@2.8.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "use-callback-ref@1.3.3",
+      "dependsOn": [
+        "tslib@2.8.1"
+      ]
+    },
+    {
+      "ref": "use-sidecar@1.1.3",
+      "dependsOn": [
+        "detect-node-es@1.1.0",
+        "tslib@2.8.1"
+      ]
+    },
+    {
+      "ref": "victory-vendor@36.9.2",
+      "dependsOn": [
+        "@types/d3-array@3.2.2",
+        "@types/d3-ease@3.0.2",
+        "@types/d3-interpolate@3.0.4",
+        "@types/d3-scale@4.0.9",
+        "@types/d3-shape@3.2.0",
+        "@types/d3-time@3.0.4",
+        "@types/d3-timer@3.0.2",
+        "d3-array@3.2.4",
+        "d3-ease@3.0.1",
+        "d3-interpolate@3.0.1",
+        "d3-scale@4.0.2",
+        "d3-shape@3.2.0",
+        "d3-time@3.1.0",
+        "d3-timer@3.0.1"
+      ]
+    }
+  ]
+}

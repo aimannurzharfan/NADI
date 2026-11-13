@@ -1,0 +1,16 @@
+NADI
+Copyright 2026 the NADI team, Universiti Teknologi Malaysia
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It was built for the Huawei ICT Competition 2026-2027, Innovation Track (Malaysia).
+
+The ESP32 firmware in firmware/csi_send and firmware/csi_recv is based on the examples in
+espressif/esp-csi (https://github.com/espressif/esp-csi), Copyright Espressif Systems,
+licensed under the Apache License, Version 2.0.
+
+The web console bundles the Inter font, Copyright 2016 The Inter Project Authors, licensed under the
+SIL Open Font License 1.1 (web/public/licenses/Inter-OFL.txt), and includes component source from
+shadcn/ui, Copyright 2023 shadcn, licensed under the MIT License.
+
+Other third-party components and their licences are listed in THIRD_PARTY_NOTICES.md.

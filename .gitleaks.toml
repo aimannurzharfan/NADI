@@ -1,0 +1,11 @@
+# gitleaks configuration: the default rules, plus one narrow exception.
+# Run by .github/workflows/ci.yml (whole history) and by scripts/hooks/pre-commit (staged changes).
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Made-up tokens in tests: each one contains 0123456789, and only in the test folders"
+condition = "AND"
+paths = ['''^tests/''', '''^tests_e2e/''', '''^scripts/stress/''']
+regexes = ['''0123456789''']

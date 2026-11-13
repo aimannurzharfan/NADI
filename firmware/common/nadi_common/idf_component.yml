@@ -1,0 +1,3 @@
+dependencies:
+  # WS2812 RGB LED on the DevKitC-1 (GPIO 48, or 38 on some board versions)
+  espressif/led_strip: "~2.5.5"

@@ -1,0 +1,78 @@
+# Local services for NADI_MODE=local. In huawei mode these are DCS Redis, RDS MySQL and IoTDA.
+# Container logs are capped (10 MB x 3 per service) so a long demo never fills the disk.
+x-logging: &logging
+  driver: json-file
+  options: {max-size: "10m", max-file: "3"}
+
+services:
+  # Valkey: the open-source (BSD-3) fork of Redis, same protocol and commands; the service keeps the name "redis"
+  # so REDIS_HOST/REDIS_PORT and the code are unchanged.
+  redis:
+    image: valkey/valkey:8.0.2
+    # append-only file on a volume: emergency state, alerts and the audit log survive a restart
+    command: ["valkey-server", "--appendonly", "yes"]
+    ports: ["127.0.0.1:6379:6379"]
+    volumes: ["valkey_data:/data"]
+    logging: *logging
+    healthcheck:
+      test: ["CMD", "valkey-cli", "ping"]
+      interval: 3s
+      retries: 10
+
+  mysql:
+    image: mysql:8.0
+    # 3307 on the host so it doesn't clash with a locally installed MySQL
+    ports: ["127.0.0.1:3307:3306"]
+    environment:
+      MYSQL_ROOT_PASSWORD: root_local_pw
+      MYSQL_DATABASE: nadi
+      MYSQL_USER: nadi
+      MYSQL_PASSWORD: nadi_local_pw
+    volumes: ["mysql_data:/var/lib/mysql"]
+    logging: *logging
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot_local_pw"]
+      interval: 3s
+      retries: 30
+
+  mosquitto:
+    image: eclipse-mosquitto:2.0.20
+    # Always on 127.0.0.1 for the server. MQTT_LAN_IP in .env (the laptop's Wi-Fi IP) also opens it to the
+    # ESP32 boards on that network. Login required: run scripts/mqtt_users.py first (writes deploy/mosquitto/passwd).
+    # 8883 is MQTT over TLS, only when scripts/mqtt_tls.py has made the certificates (deploy/mosquitto/conf.d/tls.conf).
+    # MQTT_PLAIN_IP=127.0.0.1 keeps plain 1883 off the network once every board uses TLS.
+    ports: ["127.0.0.1:1883:1883", "${MQTT_PLAIN_IP:-${MQTT_LAN_IP:-127.0.0.1}}:1883:1883",
+            "127.0.0.1:8883:8883", "${MQTT_LAN_IP:-127.0.0.1}:8883:8883"]
+    volumes: ["./deploy/mosquitto:/mosquitto/config:ro"]
+    # The broker starts once the login file is there, and says what is missing until then.
+    command: ["sh", "-c", "until [ -s /mosquitto/config/passwd ]; do echo 'Waiting for deploy/mosquitto/passwd. Run: python scripts/mqtt_users.py'; sleep 2; done; exec /usr/sbin/mosquitto -c /mosquitto/config/mosquitto.conf"]
+    logging: *logging
+
+  # "Try it" demo, no boards and no Python needed: docker compose --profile demo up --build
+  # The NADI server with the fixed 3-minute demo story (DEMO_SCENARIO), on http://localhost:8000.
+  # Only started with --profile demo. The project folder is mounted, so .env (made from .env.example when missing),
+  # the broker logins and data/ are the same files a server started by hand would use. Published on 127.0.0.1 only:
+  # the computer running Docker is the admin, nothing on the network can reach it (scripts/docker_demo.py).
+  demo:
+    profiles: ["demo"]
+    build: .
+    depends_on:
+      redis: {condition: service_healthy}
+      mysql: {condition: service_healthy}
+      mosquitto: {condition: service_started}
+    environment:
+      NADI_MODE: local
+      DEMO_SCENARIO: "on"
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      MYSQL_HOST: mysql
+      MYSQL_PORT: "3306"
+      MQTT_HOST: mosquitto
+      MQTT_PORT: "1883"
+    ports: ["127.0.0.1:8000:8000"]
+    volumes: [".:/app"]
+    logging: *logging
+
+volumes:
+  mysql_data:
+  valkey_data:

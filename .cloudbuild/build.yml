@@ -1,0 +1,21 @@
+# CodeArts Build, code-based build (Build with Code). See deploy/CODEARTS.md step 4.
+# Runs the unit tests, then packages the app as nadi.tar.gz and uploads it to the CodeArts release repo.
+# The CodeArts YAML editor validates this file: fix anything it flags there before the first run.
+version: 2.0
+steps:
+  BUILD:
+    - sh:
+        name: Test and package
+        inputs:
+          command: |
+            set -e
+            python3 --version
+            python3 -m venv .venv
+            . .venv/bin/activate
+            pip install -q -r requirements.txt
+            python -m pytest -q
+            tar --exclude=.git --exclude=.venv --exclude=ml/data -czf nadi.tar.gz .
+            ls -lh nadi.tar.gz
+    - upload_artifact:
+        inputs:
+          path: "nadi.tar.gz"

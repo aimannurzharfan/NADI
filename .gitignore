@@ -1,0 +1,47 @@
+# secrets
+.env
+
+# python
+__pycache__/
+*.pyc
+.venv/
+.venv-ml/
+venv/
+
+# ml data (keep folder, ignore large files)
+ml/data/*
+!ml/data/.gitkeep
+
+# esp-idf build output
+firmware/**/build/
+firmware/**/sdkconfig.old
+
+# editors / os
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+deploy/mosquitto/passwd
+firmware/**/sdkconfig
+firmware/**/managed_components/
+firmware/**/dependencies.lock
+firmware/climate_node/secrets.h
+firmware/climate_node/build/
+scripts/stress/results/logs/
+scripts/stress/*.txt
+ml/model/candidate/
+ml/model/nadi_model.prev.json
+docs/demo/record-server.log
+web/node_modules/
+docs/demo/*.webm
+docs/demo/*.log
+deploy/mosquitto/conf.d/*.conf
+deploy/mosquitto/certs/
+logs/
+firmware/csi_recv/main/mqtt_ca.pem
+firmware/climate_node/mqtt_ca.h
+deploy/mqtt_ca/
+# incident and drill reports and their snapshots (INCIDENT_DIR)
+data/
+# screen recordings are kept on the laptop, not in git (the GIF beside them is)
+docs/screenshots/redesign/*.webm

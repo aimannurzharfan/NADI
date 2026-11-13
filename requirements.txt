@@ -1,0 +1,21 @@
+fastapi==0.162.0
+# pinned above the FastAPI minimum: Starlette before 1.3.1 has known security issues (pip-audit)
+starlette==1.10.0
+uvicorn==0.34.0
+redis==5.2.1
+PyMySQL==1.1.1
+cryptography==50.0.2
+paho-mqtt==2.1.0
+python-dotenv==1.2.4
+# Malaysia time on Windows, which has no time zone database of its own (server/timeutil.py)
+tzdata==2025.2
+openai==3.37.0
+httpx==0.28.1
+pytest==9.1.1
+# Huawei Cloud SDKs (huawei mode only: SMN alerts in server/alerts.py, read-only checks in deploy/huawei_preflight.py)
+huaweicloudsdkcore==3.1.219
+huaweicloudsdksmn==3.1.219
+huaweicloudsdkiotda==3.1.219
+huaweicloudsdkecs==3.1.219
+huaweicloudsdkrds==3.1.219
+huaweicloudsdkdcs==3.1.219

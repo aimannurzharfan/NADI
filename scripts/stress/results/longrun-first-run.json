@@ -1,0 +1,229 @@
+{
+  "minutes": 30,
+  "questions_asked": 90,
+  "emergency_toggles": 15,
+  "heap_mb_minutes_4_8": 1.88,
+  "heap_mb_last_5": 1.98,
+  "dom_nodes_minutes_4_8": 446,
+  "dom_nodes_last_5": 517,
+  "checks": {
+    "heap_growth_under_20pct": true,
+    "dom_nodes_stable": false,
+    "alerts_capped_at_20": true,
+    "chat_capped_at_40": true
+  },
+  "pass": false,
+  "samples": [
+    {
+      "heap_mb": 1.61,
+      "dom_nodes": 353,
+      "alerts": 3,
+      "chat_lines": 2,
+      "minute": 0.0
+    },
+    {
+      "heap_mb": 1.81,
+      "dom_nodes": 398,
+      "alerts": 5,
+      "chat_lines": 8,
+      "minute": 1.0
+    },
+    {
+      "heap_mb": 1.83,
+      "dom_nodes": 404,
+      "alerts": 5,
+      "chat_lines": 14,
+      "minute": 2.0
+    },
+    {
+      "heap_mb": 1.88,
+      "dom_nodes": 416,
+      "alerts": 6,
+      "chat_lines": 20,
+      "minute": 3.0
+    },
+    {
+      "heap_mb": 1.89,
+      "dom_nodes": 422,
+      "alerts": 6,
+      "chat_lines": 26,
+      "minute": 4.0
+    },
+    {
+      "heap_mb": 1.87,
+      "dom_nodes": 440,
+      "alerts": 8,
+      "chat_lines": 32,
+      "minute": 5.0
+    },
+    {
+      "heap_mb": 1.88,
+      "dom_nodes": 446,
+      "alerts": 8,
+      "chat_lines": 38,
+      "minute": 6.0
+    },
+    {
+      "heap_mb": 1.88,
+      "dom_nodes": 454,
+      "alerts": 9,
+      "chat_lines": 40,
+      "minute": 7.0
+    },
+    {
+      "heap_mb": 1.89,
+      "dom_nodes": 454,
+      "alerts": 9,
+      "chat_lines": 40,
+      "minute": 8.0
+    },
+    {
+      "heap_mb": 1.87,
+      "dom_nodes": 462,
+      "alerts": 11,
+      "chat_lines": 40,
+      "minute": 9.0
+    },
+    {
+      "heap_mb": 1.87,
+      "dom_nodes": 463,
+      "alerts": 11,
+      "chat_lines": 40,
+      "minute": 10.0
+    },
+    {
+      "heap_mb": 1.87,
+      "dom_nodes": 469,
+      "alerts": 12,
+      "chat_lines": 40,
+      "minute": 11.0
+    },
+    {
+      "heap_mb": 1.91,
+      "dom_nodes": 469,
+      "alerts": 12,
+      "chat_lines": 40,
+      "minute": 12.0
+    },
+    {
+      "heap_mb": 1.91,
+      "dom_nodes": 484,
+      "alerts": 14,
+      "chat_lines": 40,
+      "minute": 13.0
+    },
+    {
+      "heap_mb": 1.94,
+      "dom_nodes": 484,
+      "alerts": 14,
+      "chat_lines": 40,
+      "minute": 14.0
+    },
+    {
+      "heap_mb": 1.94,
+      "dom_nodes": 490,
+      "alerts": 15,
+      "chat_lines": 40,
+      "minute": 15.0
+    },
+    {
+      "heap_mb": 1.94,
+      "dom_nodes": 490,
+      "alerts": 15,
+      "chat_lines": 40,
+      "minute": 16.0
+    },
+    {
+      "heap_mb": 1.94,
+      "dom_nodes": 502,
+      "alerts": 17,
+      "chat_lines": 40,
+      "minute": 17.0
+    },
+    {
+      "heap_mb": 1.95,
+      "dom_nodes": 502,
+      "alerts": 17,
+      "chat_lines": 40,
+      "minute": 18.0
+    },
+    {
+      "heap_mb": 1.95,
+      "dom_nodes": 508,
+      "alerts": 18,
+      "chat_lines": 40,
+      "minute": 19.0
+    },
+    {
+      "heap_mb": 1.95,
+      "dom_nodes": 508,
+      "alerts": 18,
+      "chat_lines": 40,
+      "minute": 20.0
+    },
+    {
+      "heap_mb": 1.96,
+      "dom_nodes": 516,
+      "alerts": 20,
+      "chat_lines": 40,
+      "minute": 21.0
+    },
+    {
+      "heap_mb": 1.96,
+      "dom_nodes": 517,
+      "alerts": 20,
+      "chat_lines": 40,
+      "minute": 22.0
+    },
+    {
+      "heap_mb": 1.97,
+      "dom_nodes": 517,
+      "alerts": 20,
+      "chat_lines": 40,
+      "minute": 23.0
+    },
+    {
+      "heap_mb": 1.97,
+      "dom_nodes": 517,
+      "alerts": 20,
+      "chat_lines": 40,
+      "minute": 24.0
+    },
+    {
+      "heap_mb": 1.98,
+      "dom_nodes": 517,
+      "alerts": 20,
+      "chat_lines": 40,
+      "minute": 25.0
+    },
+    {
+      "heap_mb": 1.98,
+      "dom_nodes": 517,
+      "alerts": 20,
+      "chat_lines": 40,
+      "minute": 26.0
+    },
+    {
+      "heap_mb": 1.98,
+      "dom_nodes": 517,
+      "alerts": 20,
+      "chat_lines": 40,
+      "minute": 27.0
+    },
+    {
+      "heap_mb": 1.98,
+      "dom_nodes": 517,
+      "alerts": 20,
+      "chat_lines": 40,
+      "minute": 28.0
+    },
+    {
+      "heap_mb": 1.99,
+      "dom_nodes": 520,
+      "alerts": 20,
+      "chat_lines": 40,
+      "minute": 29.0
+    }
+  ],
+  "console_errors": []
+}

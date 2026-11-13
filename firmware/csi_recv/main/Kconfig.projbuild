@@ -1,0 +1,133 @@
+menu "NADI CSI receiver"
+
+    config NADI_WIFI_SSID
+        string "Wi-Fi network name (SSID)"
+        default ""
+        help
+            A 2.4 GHz network. The receiver stays connected to it to send reports, so the
+            sender must use the same channel (the sender finds it by scanning for this name).
+
+    config NADI_WIFI_PASSWORD
+        string "Wi-Fi password"
+        default ""
+
+    config NADI_DEVICE_ID
+        string "Device ID"
+        default "nadi-recv-1"
+        help
+            Local mode: also the MQTT username; it must be listed in MQTT_DEVICE_IDS in .env.
+            Huawei mode: the device ID IoTDA gave this device.
+
+    config NADI_ROOM_ID
+        string "Room ID"
+        default "room1"
+        help
+            The room this pair of boards watches, as used by the server (room1, room2, ...).
+
+    config NADI_REPORT_INTERVAL_S
+        int "Seconds per report"
+        range 10 3600
+        default 10
+        help
+            One message per interval. Same as REPORT_INTERVAL_S in .env, so calibration, training
+            and the demo use the same window. IoTDA free tier: 10,000 messages a day for all
+            devices; in huawei mode use 20 (10 s plus a climate node is about 10,080 a day).
+
+    config NADI_SENDER_MAC
+        string "Sender MAC address"
+        default "1a:00:00:00:00:00"
+        help
+            Only CSI from this sender is used. Must match the sender's setting.
+
+    choice NADI_MOTION_SOURCE
+        prompt "Motion features from"
+        default NADI_MOTION_SOURCE_RSSI
+        help
+            What motion_mean and motion_std in each report are computed from. amp_var, rssi_mean and
+            n_packets are the same either way, and so are the field names the server reads.
+
+        config NADI_MOTION_SOURCE_RSSI
+            bool "RSSI of the sender's packets (std and mean step, dB)"
+        config NADI_MOTION_SOURCE_CSI_AMPLITUDE
+            bool "CSI subcarrier amplitudes (the first method)"
+    endchoice
+
+    choice NADI_TARGET
+        prompt "Where reports go"
+        default NADI_TARGET_LOCAL
+
+        config NADI_TARGET_LOCAL
+            bool "Local mode: Mosquitto on the laptop"
+        config NADI_TARGET_HUAWEI
+            bool "Huawei mode: Huawei Cloud IoTDA (MQTTS)"
+    endchoice
+
+    config NADI_MQTT_HOST
+        string "Laptop IP address on the Wi-Fi network"
+        depends on NADI_TARGET_LOCAL
+        default ""
+        help
+            The laptop's IPv4 address (ipconfig), the same as MQTT_LAN_IP in .env.
+
+    config NADI_MQTT_PORT
+        int "Mosquitto port"
+        depends on NADI_TARGET_LOCAL
+        default 1883
+
+    config NADI_MQTT_TLS
+        bool "MQTT over TLS (port 8883, needs main/mqtt_ca.pem from scripts/mqtt_tls.py)"
+        depends on NADI_TARGET_LOCAL
+        default n
+        help
+            Encrypts reports on the Wi-Fi network. Run python scripts/mqtt_tls.py on the laptop
+            first: it makes the broker certificate and copies the CA to main/mqtt_ca.pem. Then set
+            the port to 8883 (here or with setup over serial).
+
+    config NADI_MQTT_TLS_SKIP_CN
+        bool "Do not check the broker address against the certificate"
+        depends on NADI_MQTT_TLS
+        default n
+        help
+            The certificate from scripts/mqtt_tls.py names the laptop IP. Turn this on only if the
+            laptop IP changes and you cannot run the script again; the CA is still checked.
+
+    config NADI_MQTT_PASSWORD
+        string "MQTT password (this device's MQTT_PASSWORD_<ID> in .env)"
+        depends on NADI_TARGET_LOCAL
+        default ""
+        help
+            Each device has its own password. For device ID nadi-recv-1 it is
+            MQTT_PASSWORD_NADI_RECV_1 in .env, written by python scripts/mqtt_users.py.
+
+    config NADI_IOTDA_HOST
+        string "IoTDA MQTTS host name"
+        depends on NADI_TARGET_HUAWEI
+        default ""
+        help
+            IoTDA console > Overview > Access Details, device access, MQTTS.
+
+    config NADI_IOTDA_PORT
+        int "IoTDA MQTTS port"
+        depends on NADI_TARGET_HUAWEI
+        default 8883
+
+    config NADI_IOTDA_DEVICE_SECRET
+        string "IoTDA device secret"
+        depends on NADI_TARGET_HUAWEI
+        default ""
+
+    config NADI_NTP_SERVER
+        string "Time server"
+        default "pool.ntp.org"
+        help
+            Clock for the "ts" field and for IoTDA login. Without it (no internet) local mode
+            still works: reports go out with ts 0 and the server uses its own clock.
+
+    config NADI_LED_GPIO
+        int "Status LED pin (onboard RGB LED)"
+        range -1 48
+        default 48
+        help
+            48 on most ESP32-S3 DevKitC-1 boards, 38 on some versions (v1.1). -1 turns the LED off.
+
+endmenu

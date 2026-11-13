@@ -1,0 +1,16 @@
+[Unit]
+Description=NADI occupancy server (FastAPI)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=nadi
+WorkingDirectory=/opt/nadi/current
+# Proxy headers are handled by the app (TRUSTED_PROXIES in .env), never by uvicorn. Limits: at most 200 requests at
+# once, idle keep-alive connections closed after 5 s (slow clients cannot hold sockets open).
+ExecStart=/opt/nadi/venv/bin/uvicorn server.main:app --host 0.0.0.0 --port 8000 --no-proxy-headers --limit-concurrency 200 --timeout-keep-alive 5
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

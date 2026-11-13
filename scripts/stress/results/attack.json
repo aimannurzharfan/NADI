@@ -1,0 +1,491 @@
+{
+  "passed": 97,
+  "total": 97,
+  "results": [
+    {
+      "check": "HTTP bad input rejected with 4xx: oversized body (9 KB)",
+      "pass": true,
+      "detail": "413 {'detail': 'The request is too large: the limit is 8192 bytes.'}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: malformed JSON",
+      "pass": true,
+      "detail": "422 {'detail': [{'loc': ['body', 48], 'msg': 'JSON decode error', 'type': 'json_invalid'}]}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: empty body",
+      "pass": true,
+      "detail": "422 {'detail': [{'loc': ['body'], 'msg': 'Field required', 'type': 'missing'}]}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: wrong type: motion_std as text",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: motion_std must be a number.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: NaN",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: Device None may not report for room1.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: Infinity",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: Device None may not report for room1.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: negative motion",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: motion_std must be between 0.0 and 100.0.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: temperature 500",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: temp_c must be between -20.0 and 70.0.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: humidity 150",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: humidity must be between 0.0 and 100.0.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: people 9999 (made-up service)",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: service_id must be csi or climate.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: count service: 5000 people",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: headcount must be between 0 and 1000.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: count service: 2.5 people",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: headcount must be a number.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: count service: negative",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: headcount must be between 0 and 1000.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: unknown room",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: room99 is not a registered room.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: timestamp 2 days old",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: ts is more than one day old.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: timestamp 1 hour ahead",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: The timestamp is more than 5 minutes ahead of the server clock.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: SQL injection room id",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: room_id may use only letters, digits, - and _ (up to 32).']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: XSS room id",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: room_id may use only letters, digits, - and _ (up to 32).']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: emoji room id",
+      "pass": true,
+      "detail": "422 {'detail': ['services[0]: room_id may use only letters, digits, - and _ (up to 32).']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: 51 entries",
+      "pass": true,
+      "detail": "422 {'detail': ['The report has more than 50 entries.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: services not a list",
+      "pass": true,
+      "detail": "422 {'detail': ['The report has no services list.']}"
+    },
+    {
+      "check": "HTTP bad input rejected with 4xx: one bad entry among good ones",
+      "pass": true,
+      "detail": "422 {'detail': ['services[1]: motion_std must be between 0.0 and 100.0.']}"
+    },
+    {
+      "check": "HTTP bad input: nothing stored",
+      "pass": true,
+      "detail": "0 rows added"
+    },
+    {
+      "check": "valid report stored once",
+      "pass": true,
+      "detail": "{'ok': True, 'saved': 1, 'duplicate': 0, 'dropped': 0, 'suspicious': 0}"
+    },
+    {
+      "check": "duplicate report accepted but not stored again",
+      "pass": true,
+      "detail": "{'ok': True, 'saved': 0, 'duplicate': 1, 'dropped': 0, 'suspicious': 0}"
+    },
+    {
+      "check": "duplicate: exactly one row",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "check": "chat question over 500 characters: 422",
+      "pass": true,
+      "detail": "(422, {'detail': 'The question is too long: the limit is 500 characters.'})"
+    },
+    {
+      "check": "chat body over 4 KB: 413",
+      "pass": true,
+      "detail": "413"
+    },
+    {
+      "check": "chat odd text answered safely: <script>alert(1)</sc",
+      "pass": true,
+      "detail": "(200, {'answer': '3 or more people inside, in 1 room. 2 rooms are not reporting, so their counts are unknown: <img src=x onerror=window.__xss=1> and Hall A.', 'source': 'fallback', 'model': 'built-in answers (no language model)'})"
+    },
+    {
+      "check": "chat odd text answered safely: '; DROP TABLE occupa",
+      "pass": true,
+      "detail": "(200, {'answer': '3 orang atau lebih di dalam, di 1 bilik. 2 bilik tidak menghantar data, jadi bilangannya tidak diketahui: <img src=x onerror=window.__xss=1> dan Hall A.', 'source': 'fallback', 'model': 'built-in answers (no language model)'})"
+    },
+    {
+      "check": "chat odd text answered safely: Berapa orang? 😀🔥",
+      "pass": true,
+      "detail": "(200, {'answer': '3 orang atau lebih di dalam, di 1 bilik. 2 bilik tidak menghantar data, jadi bilangannya tidak diketahui: <img src=x onerror=window.__xss=1> dan Hall A.', 'source': 'fallback', 'model': 'built-in answers (no language model)'})"
+    },
+    {
+      "check": "emergency {\"on\": \"false\"} as text: 422, alarm not started",
+      "pass": true,
+      "detail": "(422, {'detail': [{'loc': ['body', 'on'], 'msg': 'Input should be a valid boolean', 'type': 'bool_type'}]})"
+    },
+    {
+      "check": "MQTT simulator login works",
+      "pass": true,
+      "detail": "Success"
+    },
+    {
+      "check": "MQTT bad payloads: nothing stored",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "check": "MQTT report for a room the device may not use: refused",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "MQTT valid report after the bad ones is stored",
+      "pass": true,
+      "detail": "1"
+    },
+    {
+      "check": "MQTT publish on another device's topic: dropped by the broker",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "check": "MQTT without login: refused",
+      "pass": true,
+      "detail": "Not authorized"
+    },
+    {
+      "check": "MQTT wrong password: refused",
+      "pass": true,
+      "detail": "Not authorized"
+    },
+    {
+      "check": "brute force: 5 wrong tokens lock the IP, further guesses get 429",
+      "pass": true,
+      "detail": "(429, {'detail': 'Too many wrong admin tokens from this address. Try again in 15 minutes.'})"
+    },
+    {
+      "check": "brute force: a warden on the same IP is not locked out (right token works)",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "check": "chat flood: 10 per minute per IP, then 429",
+      "pass": true,
+      "detail": "[200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 429, 429, 429, 429, 429]"
+    },
+    {
+      "check": "emergency toggle spam: 6 per minute per IP, then 429",
+      "pass": true,
+      "detail": "[200, 200, 200, 200, 200, 200, 429, 429, 429, 429]"
+    },
+    {
+      "check": "two wardens at once: one alarm time",
+      "pass": true,
+      "detail": "{1793189826}"
+    },
+    {
+      "check": "two wardens at once: one start in the audit log",
+      "pass": true,
+      "detail": "[{'ts': 1793189826, 'action': 'start', 'by': 'stress', 'ip': '10.66.2.4', 'drill': False, 'incident': '20261028-121706-real-6607'}, {'ts': 1793189825, 'action': 'end', 'by': 'stress', 'ip': '10.66.0.3', 'started': 1793189825, 'drill': False, 'incident': '20261028-121705-real-3eef'}, {'ts': 179318982"
+    },
+    {
+      "check": "audit shown in alerts (who and time, no IP), once for the simultaneous presses",
+      "pass": true,
+      "detail": "[{'id': '6ae1e7c2-000c9f', 'ts': 1793189826, 'kind': 'info', 'severity': 'info', 'via': 'console', 'subject': 'NADI: Emergency mode started by stress', 'message': 'stress at 20:17:06.', 'ack': None, 'drill': False}]"
+    },
+    {
+      "check": "audit log with IP needs the admin token",
+      "pass": true,
+      "detail": "401"
+    },
+    {
+      "check": "audit log with the token has the IP",
+      "pass": true,
+      "detail": "{'audit': [{'ts': 1793189826, 'action': 'start', 'by': 'stress', 'ip': '10.66.2.4', 'drill': False, 'incident': '20261028-121706-real-6607'}, {'ts': 1793189825, 'action': 'end', 'by': 'stress', 'ip': '10.66.0.3', 'started': 1793189825, 'drill': False, 'incident': '20261028-121705-real-3eef'}, {'ts':"
+    },
+    {
+      "check": "ending at once: one end in the audit log, all see it off",
+      "pass": true,
+      "detail": "[{'ts': 1793189826, 'action': 'end', 'by': 'stress', 'ip': '10.66.3.5', 'started': 1793189826, 'drill': False, 'incident': '20261028-121706-real-6607'}, {'ts': 1793189826, 'action': 'start', 'by': 'stress', 'ip': '10.66.2.4', 'drill': False, 'incident': '20261028-121706-real-6607'}, {'ts': 179318982"
+    },
+    {
+      "check": "X-Forwarded-For: 127.0.0.1 is not 'this computer': no admin",
+      "pass": true,
+      "detail": "(401, {'detail': 'An admin token is required.'})"
+    },
+    {
+      "check": "X-Real-IP / Forwarded headers also cancel localhost admin",
+      "pass": true,
+      "detail": "(401, {'detail': 'An admin token is required.'})"
+    },
+    {
+      "check": "guessing tokens through /api/me: counted, 429 after 5",
+      "pass": true,
+      "detail": "[401, 401, 401, 401, 401, 429]"
+    },
+    {
+      "check": "read flood from one IP: 429 after 240 a minute, with Retry-After",
+      "pass": true,
+      "detail": "(240, '51')"
+    },
+    {
+      "check": "read flood: other IPs still served",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "check": "security headers on the console page",
+      "pass": true,
+      "detail": "{'date': 'Wed, 28 Oct 2026 12:17:09 GMT', 'server': 'uvicorn', 'cache-control': 'no-cache', 'content-type': 'text/html; charset=utf-8', 'accept-ranges': 'bytes', 'content-length': '402', 'last-modified': 'Wed, 28 Oct 2026 02:00:14 GMT', 'etag': '\"076923543a442460bec967231db71911\"', 'content-security"
+    },
+    {
+      "check": "board flooding reports: only one per half interval stored, the rest dropped",
+      "pass": true,
+      "detail": "(1, [{'ok': True, 'saved': 1, 'duplicate': 0, 'dropped': 0, 'suspicious': 0}, {'ok': True, 'saved': 0, 'duplicate': 0, 'dropped': 1, 'suspicious': 0}, {'ok': True, 'saved': 0, 'duplicate': 0, 'dropped': 1, 'suspicious': 0}, {'ok': True, 'saved': 0, 'duplicate': 0, 'dropped': 1, 'suspicious': 0}, {'o"
+    },
+    {
+      "check": "forged jump in a count (5 to 95): held back, not shown",
+      "pass": true,
+      "detail": "({'ok': True, 'saved': 1, 'duplicate': 0, 'dropped': 0, 'suspicious': 0}, {'ok': True, 'saved': 0, 'duplicate': 0, 'dropped': 0, 'suspicious': 1}, 5)"
+    },
+    {
+      "check": "forged jump: a 'suspicious reading' alert",
+      "pass": true,
+      "detail": "['Suspicious reading', 'NADI: Emergency mode ended by stress', 'NADI: Emergency mode started by stress']"
+    },
+    {
+      "check": "a real jump is accepted when the next report agrees",
+      "pass": true,
+      "detail": "{'ok': True, 'saved': 1, 'duplicate': 0, 'dropped': 0, 'suspicious': 0}"
+    },
+    {
+      "check": "MQTT packet over 4 KB: broker disconnects the client",
+      "pass": true,
+      "detail": "1, k30, u'nadi-sim').\nmosquitto-1  | 1793189850: Client oversize-test disconnected due to oversize packet.\nmosquitto-1  | 1793189851: New connection from 172.19.0.1:54448 on port 1883.\nmosquitto-1  | 1793189852: New client connected from 172.19.0.1:54448 as oversize-test (p2, c1, k30, u'nadi-sim').\n"
+    },
+    {
+      "check": "broker connection flood: new connections refused at the limit, fine again after",
+      "pass": true,
+      "detail": "(True, ReasonCode(Connack, 'Success'))"
+    },
+    {
+      "check": "CSRF: a POST from another website is refused (403)",
+      "pass": true,
+      "detail": "(403, {'detail': 'Refused: this request came from another website.'})"
+    },
+    {
+      "check": "CSRF: Sec-Fetch-Site cross-site is refused even with a matching Origin",
+      "pass": true,
+      "detail": "(403, {'detail': 'Refused: this request came from another website.'})"
+    },
+    {
+      "check": "DNS rebinding: a foreign Host name is not 'this computer' (no admin)",
+      "pass": true,
+      "detail": "(401, {'detail': 'An admin token is required.'})"
+    },
+    {
+      "check": "DNS rebinding: /api/me says not admin",
+      "pass": true,
+      "detail": "{'viewer': True, 'viewer_required': False, 'rule': 'token', 'admin': False, 'who': None, 'status': 401}"
+    },
+    {
+      "check": "/iotda without INGEST_TOKEN: skipped (INGEST_TOKEN is set in .env)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "API docs /docs: refused to a caller that is not admin",
+      "pass": true,
+      "detail": "401"
+    },
+    {
+      "check": "API docs /redoc: refused to a caller that is not admin",
+      "pass": true,
+      "detail": "401"
+    },
+    {
+      "check": "API docs /openapi.json: refused to a caller that is not admin",
+      "pass": true,
+      "detail": "401"
+    },
+    {
+      "check": "API docs: admin token gets the schema",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "check": "drill: started",
+      "pass": true,
+      "detail": "{'on': True, 'since': 1793189863, 'drill': True, 'id': '20261028-121743-drill-1048'}"
+    },
+    {
+      "check": "drill: its alerts say [DRILL] and are never critical",
+      "pass": true,
+      "detail": "['[DRILL] NADI: Emergency mode started by stress', '[DRILL] NADI: Emergency mode started', 'Suspicious reading']"
+    },
+    {
+      "check": "warden mark without the admin token: 401",
+      "pass": true,
+      "detail": "401"
+    },
+    {
+      "check": "warden mark with the token: stored and shown",
+      "pass": true,
+      "detail": "{'accountability': {'room1': {'status': 'clear', 'by': 'stress', 'ts': 1793189863}}}"
+    },
+    {
+      "check": "warden mark: an unknown status is refused (422)",
+      "pass": true,
+      "detail": "422"
+    },
+    {
+      "check": "delete all data without the admin token: 401",
+      "pass": true,
+      "detail": "401"
+    },
+    {
+      "check": "delete all data without the typed phrase: 422, nothing deleted",
+      "pass": true,
+      "detail": "422"
+    },
+    {
+      "check": "delete all data during a drill: refused (409)",
+      "pass": true,
+      "detail": "409"
+    },
+    {
+      "check": "drill ended: marks reset",
+      "pass": true,
+      "detail": "{}"
+    },
+    {
+      "check": "drill ended: a drill report is listed with the mark counted",
+      "pass": true,
+      "detail": "{'id': '20261028-121743-drill-1048', 'kind': 'drill', 'started': 1793189863, 'ended': 1793189863, 'duration_s': 0, 'started_by': 'stress', 'ended_by': 'stress', 'start_total': 99, 'start_at_least': True, 'demo': False, 'marked': 1, 'offline_rooms': 1}"
+    },
+    {
+      "check": "report ids cannot reach other files",
+      "pass": true,
+      "detail": "404"
+    },
+    {
+      "check": "emergency on and Hall A reports 40 people",
+      "pass": true,
+      "detail": "(200, 200, {'ok': True, 'saved': 1, 'duplicate': 0, 'dropped': 0, 'suspicious': 0}, (40, True))"
+    },
+    {
+      "check": "fake 0 during an emergency: no token, from the network: 401",
+      "pass": true,
+      "detail": "401"
+    },
+    {
+      "check": "fake 0 during an emergency: wrong token: 401",
+      "pass": true,
+      "detail": "401"
+    },
+    {
+      "check": "fake 0 during an emergency: cross-site POST to /iotda, /iotda/, //iotda, /IOTDA, /Iotda/ (even with the token): 403",
+      "pass": true,
+      "detail": "[403, 403, 403, 403, 403]"
+    },
+    {
+      "check": "fake 0 during an emergency: Sec-Fetch-Site cross-site on every /iotda spelling: 403",
+      "pass": true,
+      "detail": "[403, 403, 403, 403, 403]"
+    },
+    {
+      "check": "other spellings of /iotda never reach the endpoint or redirect to it (405)",
+      "pass": true,
+      "detail": "[405, 405, 405, 405]"
+    },
+    {
+      "check": "fake 0 during an emergency: over MQTT from a board not allowed in that room: not shown",
+      "pass": true,
+      "detail": "(40, True)"
+    },
+    {
+      "check": "fake 0 during an emergency: 40 to 0 in one report, even with the token: held back, still 40",
+      "pass": true,
+      "detail": "(200, {'ok': True, 'saved': 0, 'duplicate': 0, 'dropped': 0, 'suspicious': 1}, (40, True))"
+    },
+    {
+      "check": "empty INGEST_TOKEN: another address 401, any token 401, a foreign Host name 401",
+      "pass": true,
+      "detail": "(401, 401, 401)"
+    },
+    {
+      "check": "empty INGEST_TOKEN: cross-site POST from a browser on this computer, every spelling: 403",
+      "pass": true,
+      "detail": "[403, 403, 403, 403, 403]"
+    },
+    {
+      "check": "empty INGEST_TOKEN: this computer itself (the simulator) still accepted",
+      "pass": true,
+      "detail": "(200, {'ok': True, 'ignored': 'device.message'})"
+    },
+    {
+      "check": "dashboard: room name with HTML is shown as text, never run",
+      "pass": true,
+      "detail": "{'script_ran': False, 'shown_as_text': 1, 'img_elements': 0}"
+    },
+    {
+      "check": "viewer token: no token 401, viewer token 200, and it is not an admin token",
+      "pass": true,
+      "detail": "(401, 200, 401)"
+    },
+    {
+      "check": "huawei mode with default secrets: refuses to start, values not printed",
+      "pass": true,
+      "detail": "i mode: MYSQL_PASSWORD still has the example or docker-compose value; VIEWER_TOKEN must be set in huawei mode (the dashboard data is not public); ADMIN_TOKEN or ADMIN_TOKENS must be set in huawei mode. Make new values with: python scripts/new_token.py\n\nERROR:    Application startup failed. Exiting.\n"
+    },
+    {
+      "check": "server still running after every attack",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no 500 / traceback in the server log (Windows connection-reset noise excluded)",
+      "pass": true,
+      "detail": "\n"
+    }
+  ]
+}

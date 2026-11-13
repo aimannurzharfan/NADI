@@ -1,0 +1,12 @@
+# Who may use which topic. Same topic names as Huawei IoTDA.
+
+# The NADI server (MQTT_USERNAME in .env): reads every report, sends commands such as ac_off
+user nadi-server
+topic read $oc/devices/+/sys/properties/report
+topic write $oc/devices/+/sys/commands/#
+topic read $oc/devices/+/sys/commands/response/#
+
+# Every device logs in with its device ID as the username and may only use its own topics
+pattern write $oc/devices/%u/sys/properties/report
+pattern read $oc/devices/%u/sys/commands/#
+pattern write $oc/devices/%u/sys/commands/response/#

@@ -1,0 +1,5 @@
+# Files read inside Linux containers must keep LF line endings on Windows checkouts
+*.sh text eol=lf
+deploy/mosquitto/* text eol=lf
+# git hooks run by sh: CRLF would break them
+scripts/hooks/* text eol=lf

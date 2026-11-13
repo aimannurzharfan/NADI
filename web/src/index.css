@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light by default. Every text colour pair below passes WCAG AA on its surface (checked in tests/contrast). */
+@layer base {
+  :root {
+    --background: 210 11% 96%;      /* #F4F5F7 canvas */
+    --foreground: 206 17% 13%;      /* #1B2126 ink */
+    --card: 0 0% 100%;
+    --card-foreground: 206 17% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 206 17% 13%;
+    --primary: 254 28% 31%;         /* #423864 brand purple: buttons, selected controls, links, focus */
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 254 40% 95%;
+    --secondary: 210 12% 94%;
+    --secondary-foreground: 206 17% 13%;
+    --muted: 210 12% 94%;
+    --muted-foreground: 210 9% 38%; /* #586270 */
+    --accent: 210 14% 93%;
+    --accent-foreground: 206 17% 13%;
+    --destructive: 4 64% 44%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 213 13% 89%;
+    --input: 213 13% 84%;
+    --ring: 254 28% 31%;
+    --sidebar: 0 0% 100%;
+    --sidebar-foreground: 206 17% 13%;
+    --ok: 152 66% 28%;              /* #187A4E */
+    --ok-soft: 150 45% 93%;
+    --warn: 36 78% 31%;             /* #8F5E11, readable as text */
+    --warn-soft: 40 90% 92%;
+    --crit: 4 64% 44%;              /* #B8352A */
+    --crit-soft: 4 80% 95%;
+    --off: 207 8% 42%;              /* #636E78 */
+    --off-soft: 210 10% 93%;
+    --plan-wall: 210 10% 35%;
+    --plan-floor: 0 0% 100%;
+    --plan-line: 210 12% 80%;
+    /* Brand purple is the frame and everything that can be pressed; teal is only the live signal. Status colours never change. */
+    --brand: 186 100% 33%;          /* #0097A7 signal teal: the signal line, the sensor pair, labelled dots; not small text */
+    --brand-light: 176 46% 68%;     /* #88D3CE light teal */
+    --brand-deep: 254 28% 31%;      /* #423864 deep purple */
+    --brand-grey: 200 15% 54%;      /* #78909C */
+    --heading: 254 28% 31%;         /* headings: deep purple */
+    --nav-active: 254 45% 93%;      /* active navigation pill: a tint of the brand purple */
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);  /* the one curve for things that enter or fade */
+    color-scheme: light;
+  }
+  .dark {
+    --background: 206 15% 9%;
+    --foreground: 204 16% 91%;
+    --card: 206 14% 12%;
+    --card-foreground: 204 16% 91%;
+    --popover: 206 14% 13%;
+    --popover-foreground: 204 16% 91%;
+    --primary: 254 50% 78%;         /* lavender: the brand purple, light enough for dark cards */
+    --primary-foreground: 206 15% 9%;
+    --primary-soft: 254 22% 20%;
+    --secondary: 206 13% 17%;
+    --secondary-foreground: 204 16% 91%;
+    --muted: 206 13% 17%;
+    --muted-foreground: 206 8% 64%;
+    --accent: 206 13% 18%;
+    --accent-foreground: 204 16% 91%;
+    --destructive: 4 80% 64%;
+    --destructive-foreground: 206 15% 9%;
+    --border: 206 12% 21%;
+    --input: 206 12% 26%;
+    --ring: 254 50% 78%;
+    --sidebar: 206 14% 11%;
+    --sidebar-foreground: 204 16% 91%;
+    --ok: 151 50% 52%;
+    --ok-soft: 151 40% 16%;
+    --warn: 38 72% 58%;
+    --warn-soft: 38 50% 16%;
+    --crit: 4 82% 66%;
+    --crit-soft: 4 50% 18%;
+    --off: 206 8% 60%;
+    --off-soft: 206 10% 18%;
+    --plan-wall: 206 10% 62%;
+    --plan-floor: 206 14% 12%;
+    --plan-line: 206 10% 26%;
+    --brand: 186 100% 33%;          /* the same teal: white on it and it on dark cards both pass 3:1 */
+    --brand-light: 176 46% 68%;
+    --brand-deep: 254 30% 72%;
+    --brand-grey: 200 15% 62%;
+    --heading: 254 55% 84%;         /* headings: light lavender on dark */
+    --nav-active: 254 24% 22%;
+    color-scheme: dark;
+  }
+  /* Emergency takeover: always dark, high contrast, whatever the theme */
+  .em-theme {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 98%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 72%;
+    --border: 0 0% 22%;
+    --crit: 4 92% 66%;
+    --crit-soft: 4 60% 20%;
+    --warn: 40 92% 62%;
+    --ok: 151 55% 55%;
+    --off: 0 0% 64%;
+    --primary: 177 46% 52%;
+    --plan-wall: 0 0% 70%;
+    --plan-floor: 0 0% 9%;
+    --plan-line: 0 0% 28%;
+    color-scheme: dark;
+  }
+  * { @apply border-border; }
+  html { font-size: 14px; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01", "tnum";
+    font-variant-numeric: tabular-nums;
+    touch-action: manipulation;  /* no double-tap zoom delay on the count buttons */
+  }
+  :focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    .live-beat, .report-pulse, .slide-in, .wave-travel { animation: none !important; }
+  }
+  @media print {
+    .no-print { display: none !important; }
+  }
+}
+
+/* Overview. The floor plan fills the space it is given and keeps its shape; text on it never goes below 14 px. */
+@layer components {
+  .plan-fit { container: plan / size; }
+  .plan-box { width: min(100cqw, calc(100cqh * var(--plan-ratio))); aspect-ratio: var(--plan-ratio); container: planbox / inline-size; }
+  /* sizes follow the width the plan is actually drawn at (cqw of .plan-box) */
+  .plan-count { font-size: clamp(22px, 5cqw, 52px); line-height: 1; }
+  .plan-name { font-size: clamp(14px, 1.9cqw, 19px); line-height: 1.2; }
+  .plan-word { font-size: clamp(14px, 1.55cqw, 16px); line-height: 1.15; text-wrap: balance; }
+  @container planbox (max-width: 700px) {
+    .plan-spark, .plan-marker-label { display: none !important; }
+  }
+  @container planbox (max-width: 520px) {
+    .plan-minor { display: none !important; }
+  }
+  /* The only animations on the overview. Each runs once when its data changes; nothing loops. */
+  .report-pulse { animation: nadi-report-pulse 0.9s var(--ease-out) 1 both; }
+  .slide-in { animation: nadi-slide-in 0.35s var(--ease-out) 1 both; }
+  .live-beat { animation: nadi-live-beat 0.9s var(--ease-out) 1 both; }
+  /* the room panel's signal picture: the waves move on by one wavelength, four times, when a report arrives */
+  .wave-travel { animation: nadi-wave-travel 0.55s linear 4 both; }
+  [data-still] .wave-travel { animation: none; }
+}
+@keyframes nadi-report-pulse { from { opacity: 0.6; } to { opacity: 0; } }
+@keyframes nadi-slide-in { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
+@keyframes nadi-wave-travel { from { transform: translateX(0); } to { transform: translateX(34px); } }
+@keyframes nadi-live-beat { from { opacity: 0.55; transform: scale(1); } to { opacity: 0; transform: scale(2.8); } }

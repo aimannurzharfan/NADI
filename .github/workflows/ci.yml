@@ -1,0 +1,77 @@
+# Checks on every push and pull request. Needs no secrets: no Huawei Cloud, no database, no tokens.
+# Python tests run on an in-memory Redis (fakeredis); the browser tests and stress scripts stay on the laptop
+# (docs/TESTING.md).
+name: checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    name: Python tests and pip-audit
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - name: pytest
+        run: python -m pytest -q
+        env:
+          NTP_CHECK: "off"
+      - name: pip-audit (known vulnerabilities in Python packages)
+        # PYSEC-2026-3455/3456/3457: pyasn1 0.6.3, pinned by huaweicloudsdkcore 3.1.219 (<=0.6.3, fixed in 0.6.4).
+        # pyasn1 is only used inside the Huawei SDK to sign its own requests in huawei mode; NADI never decodes
+        # untrusted ASN.1 with it. Remove these three when the SDK allows pyasn1 0.6.4. SECURITY.md lists this.
+        # CVE-2026-106435 (GHSA-98qm-wvgf-w4cf), added 2026-10-28: pymongo 4.18.2, pinned exactly by huaweicloudsdkcore
+        # 3.1.219 (fixed in 4.18.3); its bson crash needs untrusted BSON from mmap/array buffers, and NADI never
+        # decodes BSON. Remove when the SDK allows pymongo 4.18.3.
+        # CVE-2026-119194/119195/119196/119197, added 2026-11-02: more pyasn1 decoder CPU slow-downs on crafted ASN.1
+        # (fixed in 0.6.5); huaweicloudsdkcore 3.1.220 still pins pyasn1 <=0.6.3. Same reasoning as the three above.
+        # Remove when the SDK allows pyasn1 0.6.5.
+        run: >
+          pip-audit -r requirements.txt --strict
+          --ignore-vuln PYSEC-2026-3455 --ignore-vuln PYSEC-2026-3456 --ignore-vuln PYSEC-2026-3457
+          --ignore-vuln CVE-2026-106435
+          --ignore-vuln CVE-2026-119194 --ignore-vuln CVE-2026-119195 --ignore-vuln CVE-2026-119196
+          --ignore-vuln CVE-2026-119197
+
+  web:
+    name: Web console tests and npm audit
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npx tsc -b
+      - run: npm test
+      - name: npm audit (fails on high or critical)
+        run: npm audit --audit-level=high
+
+  secrets:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0  # the whole history, not only the last commit
+      - name: Install gitleaks 8.30.1 (checksum checked)
+        run: |
+          curl -sSLo gitleaks.tar.gz https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  gitleaks.tar.gz" | sha256sum -c -
+          tar -xzf gitleaks.tar.gz gitleaks
+      - name: gitleaks
+        run: ./gitleaks git --redact --no-banner --config .gitleaks.toml .

@@ -1,0 +1,32 @@
+{
+  "_about": "Floor plan checks that the server (server/site.py validate_plan) and the editor (web/src/lib/plan-validate.ts) must answer the same way. Each case starts from dashboard/plan.json and applies its changes: set puts a value at a dotted path, del removes one, rename renames a room ID. keys: the strings keys of the problems, sorted, repeats kept.",
+  "cases": [
+    {"name": "built-in plan", "keys": []},
+    {"name": "room into the next room", "set": {"rooms.room1.x": 500}, "keys": ["site.err_overlap"]},
+    {"name": "room into a staircase", "set": {"rooms.room2.x": 60}, "keys": ["site.err_overlap"]},
+    {"name": "no exits at all", "set": {"exits": {}}, "keys": ["site.err_exit_missing", "site.err_exit_missing", "site.err_exit_missing", "site.err_no_exit"]},
+    {"name": "exit that is not on the floor", "set": {"rooms.room1.exit": "stairZ"}, "keys": ["site.err_exit_missing"]},
+    {"name": "room off the floor", "set": {"rooms.room1.x": 900}, "keys": ["site.err_door", "site.err_link", "site.err_outside"]},
+    {"name": "room too narrow", "set": {"rooms.room3.w": 30}, "keys": ["site.err_door", "site.err_small"]},
+    {"name": "empty name", "set": {"rooms.room1.name": ""}, "keys": ["site.err_name"]},
+    {"name": "name too long", "set": {"rooms.room1.name": "Lab 2 with a name much longer than forty characters"}, "keys": ["site.err_name"]},
+    {"name": "sensor pair too close", "set": {"rooms.room1.link.recv": {"x": 560, "y": 196}}, "keys": ["site.err_link"]},
+    {"name": "sensor outside the room", "set": {"rooms.room1.link.recv": {"x": 900, "y": 196}}, "keys": ["site.err_link"]},
+    {"name": "door off the wall", "set": {"rooms.room1.door": {"x": 100, "side": "s"}}, "keys": ["site.err_door"]},
+    {"name": "door on a side wall", "set": {"rooms.room1.door": {"x": 700, "side": "e"}}, "keys": ["site.err_door"]},
+    {"name": "area zero", "set": {"rooms.room1.area_m2": 0}, "keys": ["site.err_area"]},
+    {"name": "area fine", "set": {"rooms.room1.area_m2": 48}, "keys": []},
+    {"name": "capacity fine", "set": {"rooms.room1.capacity": 30}, "keys": []},
+    {"name": "capacity zero", "set": {"rooms.room1.capacity": 0}, "keys": ["site.err_capacity"]},
+    {"name": "capacity not whole", "set": {"rooms.room1.capacity": 12.5}, "keys": ["site.err_capacity"]},
+    {"name": "capacity too large", "set": {"rooms.room1.capacity": 1001}, "keys": ["site.err_capacity"]},
+    {"name": "capacity as text", "set": {"rooms.room1.capacity": "30"}, "keys": ["site.err_capacity"]},
+    {"name": "bad room ID", "rename": ["room3", "Room 3!"], "keys": ["site.err_id"]},
+    {"name": "number as text", "set": {"rooms.room1.x": "520"}, "keys": ["site.err_shape_of"]},
+    {"name": "exit without a name", "del": ["exits.stairA.label"], "keys": ["site.err_name"]},
+    {"name": "exit with a typed name", "del": ["exits.stairA.label"], "set": {"exits.stairA.name": "West stair"}, "keys": []},
+    {"name": "other space too small", "set": {"other.0.w": 20}, "keys": ["site.err_small"]},
+    {"name": "touching rooms are fine", "set": {"rooms.room3.x": 340, "rooms.room3.w": 280}, "keys": []},
+    {"name": "two problems at once", "set": {"rooms.room1.x": 500, "rooms.room3.exit": "nowhere"}, "keys": ["site.err_exit_missing", "site.err_overlap"]}
+  ]
+}
